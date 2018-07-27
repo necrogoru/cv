@@ -1,0 +1,17 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.without-margins{margin: 0 !important}
+.without-bottom-margin{margin-bottom: 0 !important}
+.without-top-margin{margin-top: 0 !important}
+.justify{text-align: justify;}
+.flex-display{display: flex;}
+.full-height-3{flex: 3;}
+.full-height-10{flex: 10;}
