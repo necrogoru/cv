@@ -34,6 +34,7 @@
       <div class="col l3 brown full-height-3">
         <div class="container">
           <div class="row white-text">
+            <h5 class="thin">Perfíl Profesional</h5>
             <ul>
               <li v-for="info in cv.information">
                 <p>
@@ -43,9 +44,13 @@
             </ul>
           </div>
           <div class="row white-text">
-            <h5 class="thin darken-1">
-              Skills
-            </h5>
+            <h5 class="thin">Perfíl Profesional</h5>
+            <p class="justify without-bottom-margin without-top-margin">
+              {{cv.profile}}
+            </p>
+          </div>
+          <div class="row white-text">
+            <h5 class="thin">Habilidades</h5>
             <ul>
               <li v-for="skill in cv.skills" >
                 <span>{{skill.name}}</span>
@@ -60,18 +65,13 @@
       </div>
 
       <div class="col l8 full-height-10">
-        <div class="section">
-          <h5 class="thin">Perfíl Profesional</h5>
-          <p class="justify without-bottom-margin without-top-margin">
-            {{cv.profile}}
-          </p>
-        </div>
+
 
         <div class="divide"></div>
         <div class="section">
           <h5 class="thin">Estudios</h5>
           <div class="col s12 l6" v-for="study in cv.academy">
-            <p><b>{{study.title}}</b></p>
+            <p class="without-bottom-margin without-top-margin"><b>{{study.title}}</b></p>
             <div class="col s6 l4">{{study.time}}</div>
             <div class="col s6 l8">{{study.college}}</div>
           </div>
@@ -82,7 +82,7 @@
           <h5 class="thin">Experiencia laboral</h5>
           <div class="col s12" v-for="job in cv.experience">
             <div class="col s12">
-              <p><b>{{job.company}}: {{job.appointment}}</b></p>
+              <p class="without-bottom-margin without-top-margin"><b>{{job.company}}: {{job.appointment}}</b></p>
             </div>
             <div class="col s6 l4">
               {{job.time}}
