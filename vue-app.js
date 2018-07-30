@@ -125,7 +125,10 @@ var app = new Vue({
             phone: '3015645089'
           }
         ]
-      }
+      },
+      interests: [
+        'Viajar', 'Música', 'Desarrollo Web', 'Tecnología', 'Motocicletas'
+      ]
     }
   }
 })

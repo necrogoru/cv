@@ -16,26 +16,27 @@
 
 </head>
 <body>
-  <header class="teal darken-1" style="z-index: 100">
+  <header class="blue darken-1" style="z-index: 100">
+    <br>
     <div class="container">
-      <div class="row without-bottom-margin">
-        <div class="valign-wrapper">
-          <img src="./index.png" width="160px" class="responsive-img right">
-          <div class="col white-text add-left-margin">
-            <h4 class="without-bottom-margin without-top-margin light">Jhon Fredy</h2>
-            <h4 class="without-bottom-margin without-top-margin semi-bold">Berrio Marin</h4>
-            <p class="without-bottom-margin without-top-margin black-text">FullStack Web Developer</p>
-          </div>
+      <div class="row valign-wrapper">
+        <div class="col s4">
+          <img src="./index.png" width="160px" class="border-radius shadow-right responsive-img right">
+        </div>
+        <div class="col s8 white-text add-left-margin">
+          <h4 class="without-bottom-margin without-top-margin light" style="position: relative; top: 15px;">Jhon Fredy</h2>
+          <h4 class="without-bottom-margin without-top-margin semi-bold">Berrio Marin</h4>
+          <p class="without-bottom-margin without-top-margin grey-text" style="position: relative; top: -5px;">FullStack Web Developer</p>
         </div>
       </div>
     </div>
   </header>
   <main id="app">
     <div class="row flex-display">
-      <div class="col l3 teal darken-1 full-height-3 border-right shadow-right">
+      <div class="col l3 blue darken-2 full-height-3 border-right ">
         <div class="container">
           <div class="row white-text">
-            <h5 class="border-bottom">Contacto</h5>
+            <h5 class="border-bottom shadow-bottom">Contacto</h5>
             <ul>
               <li v-for="info in cv.information">
                 <p>
@@ -57,7 +58,7 @@
                 <div class="col s6">
                   <span>{{skill.name}}</span>
                 </div>
-                <div class="col s6 teal darken-2">
+                <div class="col s6 blue darken-2">
                   <span class="right" v-for="n in skill.level">
                     <i class="material-icons extra-tiny">grain</i>
                   </span>
@@ -71,7 +72,7 @@
       <div class="col l8 full-height-10">
 
         <div class="section">
-          <h5 class="border-bottom teal-text text-darken-4">
+          <h5 class="border-bottom blue-text text-darken-4">
             <i class="material-icons left">school</i>Estudios
           </h5>
           <div class="col s12 l6" v-for="study in cv.academy">
@@ -82,23 +83,23 @@
         </div>
 
         <div class="section">
-          <h5 class="border-bottom teal-text text-darken-4">
+          <h5 class="border-bottom blue-text text-darken-4">
             <i class="material-icons left">work</i>Experiencia laboral
           </h5>
-          <div class="col s12" v-for="job in cv.experience">
+          <div class="col s12" v-for="(job, index) in cv.experience">
             <div class="col s12">
               <p class="without-bottom-margin without-top-margin"><b>{{job.company}}: {{job.appointment}}</b></p>
             </div>
-            <div class="col s3 l2">
+            <div class="col s3 l2" v-show="index <= 2">
               {{job.time}}<br>
               <span><i class="material-icons left tiny">phone</i>{{job.phone}}</span>
             </div>
-            <div class="col s9 l10">{{job.functions}}</div>
+            <div class="col s9 l10" v-show="index <= 2">{{job.functions}}</div>
           </div>
         </div>
 
         <div class="section">
-          <h5 class="border-bottom teal-text text-darken-4">
+          <h5 class="border-bottom blue-text text-darken-4">
             <i class="material-icons left">group</i>Referencias
           </h5>
           <div class="col s6" v-for="reference in cv.references.family">
@@ -115,6 +116,13 @@
               <i class="material-icons left tiny">phone</i>{{reference.phone}}
             </div>
           </div>
+        </div>
+
+        <div class="section">
+          <h5 class="border-bottom blue-text text-darken-4">
+            <i class="material-icons left">loyalty</i>Intereses
+          </h5>
+          <p><span v-for="(interest, index) in cv.interests">{{(index!=0)? ' - ':''}}{{interest}}</span></p>
         </div>
       </div>
     </div>
