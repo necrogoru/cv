@@ -5,25 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <title>CV Jhon F. Berrio</title>
+  <title>Jhon F. Berrio CV</title>
 
   <!-- Compiled and minified CSS -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
   <link rel="stylesheet" href="style.css">
 
 
 </head>
 <body>
-  <header class="brown">
+  <header class="teal darken-1" style="z-index: 100">
     <div class="container">
       <div class="row without-bottom-margin">
         <div class="valign-wrapper">
-          <img src="https://bulma.io/images/placeholders/256x256.png" class="responsive-img circle">
-          <div class="brown darken-1 white-text">
-            <h4>Jhon Fredy</h2>
-            <h5>Berrio Marin</h3>
-            <span>FullStack Web Developer</span>
+          <img src="./index.png" width="160px" class="responsive-img right">
+          <div class="col white-text add-left-margin">
+            <h4 class="without-bottom-margin without-top-margin light">Jhon Fredy</h2>
+            <h4 class="without-bottom-margin without-top-margin semi-bold">Berrio Marin</h4>
+            <p class="without-bottom-margin without-top-margin black-text">FullStack Web Developer</p>
           </div>
         </div>
       </div>
@@ -31,10 +32,10 @@
   </header>
   <main id="app">
     <div class="row flex-display">
-      <div class="col l3 brown full-height-3">
+      <div class="col l3 teal darken-1 full-height-3 border-right shadow-right">
         <div class="container">
           <div class="row white-text">
-            <h5 class="thin">Perfíl Profesional</h5>
+            <h5 class="border-bottom">Contacto</h5>
             <ul>
               <li v-for="info in cv.information">
                 <p>
@@ -44,32 +45,35 @@
             </ul>
           </div>
           <div class="row white-text">
-            <h5 class="thin">Perfíl Profesional</h5>
-            <p class="justify without-bottom-margin without-top-margin">
+            <h5 class="border-bottom">Perfíl Profesional</h5>
+            <p class="justify without-top-margin">
               {{cv.profile}}
             </p>
           </div>
           <div class="row white-text">
-            <h5 class="thin">Habilidades</h5>
+            <h5 class="border-bottom">Habilidades</h5>
             <ul>
               <li v-for="skill in cv.skills" >
-                <span>{{skill.name}}</span>
-                <span class="right" v-for="n in skill.level"><i class="material-icons tiny">grain</i></span>
+                <div class="col s6">
+                  <span>{{skill.name}}</span>
+                </div>
+                <div class="col s6 teal darken-2">
+                  <span class="right" v-for="n in skill.level">
+                    <i class="material-icons extra-tiny">grain</i>
+                  </span>
+                </div>
               </li>
             </ul>
-          </div>
-          <div class="row">
-
           </div>
         </div>
       </div>
 
       <div class="col l8 full-height-10">
 
-
-        <div class="divide"></div>
         <div class="section">
-          <h5 class="thin">Estudios</h5>
+          <h5 class="border-bottom teal-text text-darken-4">
+            <i class="material-icons left">school</i>Estudios
+          </h5>
           <div class="col s12 l6" v-for="study in cv.academy">
             <p class="without-bottom-margin without-top-margin"><b>{{study.title}}</b></p>
             <div class="col s6 l4">{{study.time}}</div>
@@ -77,41 +81,44 @@
           </div>
         </div>
 
-        <div class="divide"></div>
         <div class="section">
-          <h5 class="thin">Experiencia laboral</h5>
+          <h5 class="border-bottom teal-text text-darken-4">
+            <i class="material-icons left">work</i>Experiencia laboral
+          </h5>
           <div class="col s12" v-for="job in cv.experience">
             <div class="col s12">
               <p class="without-bottom-margin without-top-margin"><b>{{job.company}}: {{job.appointment}}</b></p>
             </div>
-            <div class="col s6 l4">
-              {{job.time}}
-              <span>{{job.phone}}</span>
+            <div class="col s3 l2">
+              {{job.time}}<br>
+              <span><i class="material-icons left tiny">phone</i>{{job.phone}}</span>
             </div>
-            <div class="col s6 l8">{{job.functions}}</div>
+            <div class="col s9 l10">{{job.functions}}</div>
           </div>
         </div>
 
-        <div class="divide"></div>
         <div class="section">
-          <h5 class="thin">Referencias </h5>
-          <div class="col s12 l6" v-for="reference in cv.references.family">
+          <h5 class="border-bottom teal-text text-darken-4">
+            <i class="material-icons left">group</i>Referencias
+          </h5>
+          <div class="col s6" v-for="reference in cv.references.family">
             <p class="without-bottom-margin without-top-margin"><b>{{reference.name}}</b></p>
             <div class="col s12">{{reference.job}} en {{reference.company}}</div>
-            <div class="col s12"><i class="material-icons left tiny">phone</i>{{reference.phone}}</div>
+            <div class="col s12">
+              <i class="material-icons left tiny">phone</i>{{reference.phone}}
+            </div>
           </div>
-          <div class="col s12 l6" v-for="reference in cv.references.personal">
+          <div class="col s6" v-for="reference in cv.references.personal">
             <p class="without-bottom-margin without-top-margin"><b>{{reference.name}}</b></p>
             <div class="col s12">{{reference.job}} en {{reference.company}}</div>
-            <div class="col s12"><i class="material-icons left tiny">phone</i>{{reference.phone}}</div>
+            <div class="col s12">
+              <i class="material-icons left tiny">phone</i>{{reference.phone}}
+            </div>
           </div>
         </div>
       </div>
     </div>
   </main>
-  <footer>
-
-  </footer>
 
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>

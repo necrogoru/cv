@@ -11,7 +11,7 @@ var app = new Vue({
         {icon: 'email', value: 'jhoxsan@gmail.com'}
       ],
       skills: [
-        {name: 'Ruby on Rails', level: 5},
+        {name: 'Rails', level: 5},
         {name: 'Front End', level: 4},
         {name: 'SQL', level: 3},
         {name: 'PHP', level: 3},

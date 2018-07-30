@@ -2,11 +2,19 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  font-family: 'Rajdhani', sans-serif;
 }
 
 main {
   flex: 1 0 auto;
 }
+
+.light{font-weight: 300 !important}
+.regular{font-weight: 400 !important}
+.medium{font-weight: 500 !important}
+.semi-bold{font-weight: 600 !important}
+.bold{font-weight: 700 !important}
+h5{font-weight: 700 !important}
 
 .without-margins{margin: 0 !important}
 .without-bottom-margin{margin-bottom: 0 !important}
@@ -15,3 +23,15 @@ main {
 .flex-display{display: flex;}
 .full-height-3{flex: 3;}
 .full-height-10{flex: 10;}
+.add-left-margin{margin-left: 50px}
+.extra-tiny{font-size: 0.8rem}
+.border-right{
+  border-right: 2px dashed rgba(255, 255, 255, 0.95);
+}
+.border-bottom{
+  border-bottom-color: rgb(34, 152, 148);
+  border-bottom-width: 1px;
+  border-bottom-style: ridge;
+}
+
+.shadow-right{box-shadow: 15px 0px 10px -15px #111;}
