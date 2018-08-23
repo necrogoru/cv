@@ -47,3 +47,10 @@ h5{font-weight: 700 !important}
 .border-radius{
   border-radius: 25px
 }
+
+.bars {
+  width: 100%;
+  display: inline-flex;
+  border: 1px solid rgb(31, 153, 149);
+  border-radius: 3px
+}
