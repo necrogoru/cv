@@ -25,7 +25,7 @@ var app = new Vue({
           college: "Instituto Tecnológico Metropolitano",
           type: 'Universitarios',
           title: 'Ingeniero en Telecomunicaciones',
-          time: 'Pendiente de grados 09-2018'
+          time: '09-2018'
         },{
           college: "Instituto Tecnológico Metropolitano",
           type: 'Universitarios',
@@ -54,12 +54,19 @@ var app = new Vue({
       ],
       experience: [
         {
+          company: 'La Haus',
+          appointment: 'FullStack Developer Junior',
+          functions: 'Desarrollar FrontEnd de la plataforma con eñ framework VueJS y el BackEnd en Ruby on Rails.',
+          leader: 'Lina Ramirez',
+          phone: '5158638',
+          time: '1 de Noviembre 2018 - Actualidad'
+        }, {
           company: 'TIGOUNE',
           appointment: 'Soporte Operación',
           functions: 'Diseñar, desarrollar e implementar la plataforma del área backoffice pymes y sus bases de datos bajo Ruby on Rails, Javascript, HTML, SCSS, Materialize, Vue JS, PostgreSQL. Administrar plataforma. Crear consumos de Web Services, bajo SOAP, de mensajería certificada para envíos masivos. Desarrollar real time y non-real time Dashboards para visualizar estados de la operación e indicadores.',
           leader: 'Lina Ramirez',
           phone: '5158638',
-          time: 'Septiembre 2017 - Actualidad'
+          time: '18 de Septiembre 2017 - 31 de Octubre 2018'
         }, {
           company: 'EMTELCO',
           appointment: 'Analista de Programación y Control de Apoyo a Gerencia BPO Presencial',
