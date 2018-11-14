@@ -10,13 +10,28 @@ main {
 }
 
 header{
-  background-image: url(https://get.pxhere.com/photo/computer-work-screen-working-technology-atmosphere-color-desktop-office-gadget-blue-coding-monitor-programming-programmer-text-ethernet-software-code-screenshot-data-css-atmosphere-of-earth-computer-wallpaper-915555.jpg);
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-attachment: inherit;
-  background-origin: padding-box;
+  overflow: hidden;
+  position: relative;
+  height: 150px;
 }
 
+header>img{
+  position: absolute;
+  top: -60%;
+  left: -5%;
+  width: 110%;
+  height: auto;
+  z-index: -1
+}
+
+.left-panel-gradient {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#111d25+0,131e4f+100 */
+  background: #111d25; /* Old browsers */
+  background: -moz-linear-gradient(top, #111d25 0%, #131e4f 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #111d25 0%,#131e4f 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #111d25 0%,#131e4f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#111d25', endColorstr='#131e4f',GradientType=0 ); /* IE6-9 */
+}
 .light{font-weight: 300 !important}
 .regular{font-weight: 400 !important}
 .medium{font-weight: 500 !important}
