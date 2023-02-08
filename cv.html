@@ -2,136 +2,215 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+  <meta
+    http-equiv="X-UA-Compatible"
+    content="ie=edge">
 
   <title>Jhon F. Berrio CV</title>
 
   <!-- Compiled and minified CSS -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-  <link rel="stylesheet" href="style.css">
-
-
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&display=swap" rel="stylesheet">
+  <link
+    rel="stylesheet"
+    href="style.css">
 </head>
 <body>
-  <header class="blue darken-4" style="z-index: 100">
-    <img src="./banner-background.jpg">
-    <br>
-    <div class="container">
-      <div class="row valign-wrapper">
-        <div class="col s4">
-          <img src="./index.png" width="160px" class="border-radius shadow-right responsive-img right">
-        </div>
-        <div class="col s8 white-text add-left-margin">
-          <h4 class="without-bottom-margin without-top-margin light" style="position: relative; top: 15px;">Jhon Fredy</h2>
-          <h4 class="without-bottom-margin without-top-margin semi-bold">Berrio Marin</h4>
-          <p class="without-bottom-margin without-top-margin grey-text" style="position: relative; top: -5px;">FullStack Developer</p>
+  <div
+    id="app"
+    class="w-full max-w-screen-xl">
+    <header class="relative p-10">
+      <h1
+        class="text-8xl font-semibold text-center mb-4"
+        style="font-family: 'Lobster Two', cursive;">
+        <span class="border-b-2 border-gray-800 pb-8 inline-block">
+          Jhon F. Berrio
+        </span>
+      </h1>
+
+      <p class="text-center uppercase">
+        Senior Frontend Developer
+      </p>
+
+      <div class="flex mt-4 gap-36">
+        <figure class="w-72 h-72 flex-none rounded-full p-8 border border-gray-800">
+          <img
+            src="./meSmall.png"
+            width="172"
+            class="rounded-full w-full h-full object-cover">
+        </figure>
+
+        <div>
+          <h2 class="text-4xl mb-4 mt-14 uppercase">
+            Sobre mi
+          </h2>
+
+          <p class="">
+            {{ cv.profile }}
+          </p>
         </div>
       </div>
-    </div>
-  </header>
-  <main id="app">
-    <div class="row flex-display">
-      <div class="col l3 left-panel-gradient full-height-3 border-right ">
-        <div class="container">
-          <div class="row white-text">
-            <h5 class="border-bottom shadow-bottom">Contacto</h5>
-            <ul>
-              <li v-for="info in cv.information">
-                <p>
-                  <i class="material-icons left">{{info.icon}}</i>{{info.value}}
-                </p>
-              </li>
-            </ul>
-          </div>
-          <div class="row white-text">
-            <h5 class="border-bottom">Perfíl Profesional</h5>
-            <p class="justify without-top-margin">
-              {{cv.profile}}
+    </header>
+
+    <main class="grid grid-cols-6 py-10 px-10 gap-10">
+      <hr class="col-span-6 border-t border-gray-800">
+      <aside class="col-span-2 pr-10 border-r border-gray-800">
+        <section>
+          <h2 class="text-4xl mb-4 mt-14 uppercase">
+            Contacto
+          </h2>
+
+          <ul class="flex flex-col gap-2">
+            <li
+              v-for="(info, index) in cv.information"
+              :key="`info-${index}`"
+              class="flex items-center gap-2">
+              <span class="bg-yellow-500 flex items-center justify-center p-2">
+                <i class="material-icons left">{{ info.icon }}</i>
+              </span>
+
+              <div>
+                <span class="font-semibold">
+                  {{ info.kind }}
+                </span>
+                <br>
+                {{ info.value }}
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="mt-14">
+          <h2 class="text-4xl mb-4 mt-14 uppercase">
+            Estudios
+          </h2>
+
+          <div
+            v-for="study in cv.academy"
+            class="mt-4">
+            <p class="text-xl">
+              {{ study.time }}
+            </p>
+
+            <p>
+              <span class="font-semibold">{{ study.title }}</span>
+            </p>
+
+            <p class="text-xl text-gray-600">
+              {{ study.college }}
             </p>
           </div>
-          <div class="row white-text">
-            <h5 class="border-bottom">Habilidades</h5>
-            <ul>
-              <li v-for="skill in cv.skills" >
-                <div class="col s6">
-                  <span>{{skill.name}}</span>
-                </div>
-                <div class="col s6 ">
-                  <span class="blue darken-2 bars">
-                    <i class="material-icons extra-tiny" v-for="n in skill.level">grain</i>
-                  </span>
-                </div>
-              </li>
-            </ul>
+        </section>
+
+        <section class="mt-14">
+          <h2 class="text-4xl mb-4 mt-14 uppercase mt-14">
+            Habilidades
+          </h2>
+
+          <ul>
+            <li
+              v-for="(skill, index) in cv.skills"
+              :key="`skill-${index}`"
+              class="flex justify-between">
+              <span>{{ skill.name }}</span>
+
+              <span class="blue darken-2 bars">
+                <i class="material-icons extra-tiny" v-for="n in skill.level">grain</i>
+              </span>
+            </li>
+          </ul>
+        </section>
+      </aside>
+
+      <div class="col-span-4 py-12">
+        <section>
+          <h2 class="text-3xl font-semibold flex items-center gap-4 ">
+            <span class="bg-yellow-500 flex items-center justify-center p-2">
+              <i class="material-icons left">work</i>
+            </span>
+            Experiencia laboral
+          </h2>
+
+          <div
+            v-for="(job, index) in cv.experience.slice(0, 4)"
+            :key="`job-${index}`"
+            class="mt-4">
+            <p class="without-bottom-margin without-top-margin">
+              <span class="font-semibold">{{ job.appointment }}</span> <span class="text-2xl">en {{ job.company }}</span>
+            </p>
+
+            <div class="">
+              {{ job.functions }}
+            </div>
+
+            <div class="text-xl text-slate-800">
+              {{ job.time }}<br>
+            </div>
           </div>
-        </div>
+        </section>
+
+        <section class="mt-14">
+          <h2 class="text-3xl font-semibold flex items-center gap-4 ">
+            <span class="bg-yellow-500 flex items-center justify-center p-2">
+              <i class="material-icons left">group</i>
+            </span>
+            Referencias
+          </h2>
+
+          <div
+            v-for="(reference, index) in cv.references.personal"
+            :key="`reference-${index}`"
+            class="mt-4">
+            <p class="font-semibold">
+              {{ reference.name }}
+            </p>
+
+            <p class="text-xl">
+              {{ reference.job }} en {{ reference.company }}
+            </p>
+
+            <p class="flex items-center gap-2">
+              <span class="border-r-2 border-yellow-500 flex items-center justify-center p-2">
+                <i class="material-icons left">phone</i>
+              </span>
+              {{ reference.phone }}
+            </p>
+          </div>
+        </section>
+
+        <section class="mt-14">
+          <h2 class="text-3xl font-semibold flex items-center gap-4 ">
+            <span class="bg-yellow-500 flex items-center justify-center p-2">
+              <i class="material-icons left">loyalty</i>
+            </span>
+            Intereses
+          </h2>
+
+          <p>
+            <span
+              v-for="(interest, index) in cv.interests"
+              :key="`interes-${index}`">
+              {{ (index!=0)? ' - ':'' }}{{ interest }}
+            </span>
+          </p>
+        </section>
       </div>
-
-      <div class="col l8 full-height-10">
-
-        <div class="section">
-          <h5 class="border-bottom blue-text text-darken-4">
-            <i class="material-icons left">school</i>Estudios
-          </h5>
-          <div class="col s12 l6" v-for="study in cv.academy">
-            <p class="without-bottom-margin without-top-margin"><b>{{study.title}}</b></p>
-            <div class="col s6 l4">{{study.time}}</div>
-            <div class="col s6 l8">{{study.college}}</div>
-          </div>
-        </div>
-
-        <div class="section">
-          <h5 class="border-bottom blue-text text-darken-4">
-            <i class="material-icons left">work</i>Experiencia laboral
-          </h5>
-          <div class="col s12" v-for="(job, index) in cv.experience">
-            <div class="col s12">
-              <p class="without-bottom-margin without-top-margin"><b>{{job.company}}: {{job.appointment}}</b></p>
-            </div>
-            <div class="col s3 l2" v-show="index <= 2">
-              {{job.time}}<br>
-              <span><i class="material-icons left tiny">phone</i>{{job.phone}}</span>
-            </div>
-            <div class="col s9 l10" v-show="index <= 2">{{job.functions}}</div>
-          </div>
-        </div>
-
-        <div class="section">
-          <h5 class="border-bottom blue-text text-darken-4">
-            <i class="material-icons left">group</i>Referencias
-          </h5>
-          <div class="col s6" v-for="reference in cv.references.family">
-            <p class="without-bottom-margin without-top-margin"><b>{{reference.name}}</b></p>
-            <div class="col s12">{{reference.job}} en {{reference.company}}</div>
-            <div class="col s12">
-              <i class="material-icons left tiny">phone</i>{{reference.phone}}
-            </div>
-          </div>
-          <div class="col s6" v-for="reference in cv.references.personal">
-            <p class="without-bottom-margin without-top-margin"><b>{{reference.name}}</b></p>
-            <div class="col s12">{{reference.job}} en {{reference.company}}</div>
-            <div class="col s12">
-              <i class="material-icons left tiny">phone</i>{{reference.phone}}
-            </div>
-          </div>
-        </div>
-
-        <div class="section">
-          <h5 class="border-bottom blue-text text-darken-4">
-            <i class="material-icons left">loyalty</i>Intereses
-          </h5>
-          <p><span v-for="(interest, index) in cv.interests">{{(index!=0)? ' - ':''}}{{interest}}</span></p>
-        </div>
-      </div>
-    </div>
-  </main>
+    </main>
+  </div>
 
   <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
   <script src="vue-app.js" charset="utf-8"></script>
 </body>
 </html>
