@@ -1,0 +1,21 @@
+---
+import { t } from "i18next"
+
+const interests: string[] = t('interests', { returnObjects: true })
+---
+<section class="mt-14">
+  <h2 class="text-3xl font-semibold flex items-center gap-4 ">
+    <span class="bg-yellow-500 flex items-center justify-center p-2">
+      <i class="material-icons left">loyalty</i>
+    </span>
+    {t('interests_title')}
+  </h2>
+
+  <p>
+    {interests.map((interest, index) => (
+      <span>
+        {(index != 0)? ' - ':''}{interest}
+      </span>
+    ))}
+  </p>
+</section>

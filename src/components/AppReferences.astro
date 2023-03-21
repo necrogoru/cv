@@ -1,0 +1,39 @@
+---
+import { t } from "i18next"
+
+interface Reference {
+  name: string
+  job: string
+  company: string
+  phone: string
+}
+
+const references: Reference[] = t('references.personal', { returnObjects: true })
+---
+<section class="mt-14">
+  <h2 class="text-3xl font-semibold flex items-center gap-4 ">
+    <span class="bg-yellow-500 flex items-center justify-center p-2">
+      <i class="material-icons left">group</i>
+    </span>
+    {t('references_title')}
+  </h2>
+
+  {references.map((reference) => (
+    <div class="mt-4">
+      <p class="font-semibold">
+        {reference.name}
+      </p>
+
+      <p class="text-xl">
+        {reference.job} en {reference.company}
+      </p>
+
+      <p class="flex items-center gap-2">
+        <span class="border-r-2 border-yellow-500 flex items-center justify-center p-2">
+          <i class="material-icons left">phone</i>
+        </span>
+        {reference.phone}
+      </p>
+    </div>
+  ))}
+</section>

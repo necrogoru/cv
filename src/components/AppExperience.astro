@@ -1,0 +1,36 @@
+---
+import { t } from "i18next"
+
+interface Experience {
+  company: string
+  appointment: string
+  functions: string
+  time: string
+}
+
+const experience: Experience[] = t('experience', { returnObjects: true })
+---
+<section>
+  <h2 class="text-3xl font-semibold flex items-center gap-4 ">
+    <span class="bg-yellow-500 flex items-center justify-center p-2">
+      <i class="material-icons left">work</i>
+    </span>
+    {t('experience_title')}
+  </h2>
+
+  {experience.slice(0, 4).map((job) => (
+    <div class="mt-4">
+      <p class="without-bottom-margin without-top-margin">
+        <span class="font-semibold">{job.appointment}</span> <span class="text-2xl">en {job.company}</span>
+      </p>
+
+      <div class="">
+        {job.functions}
+      </div>
+
+      <div class="text-xl text-slate-800">
+        {job.time}<br>
+      </div>
+    </div>
+  ))}
+</section>

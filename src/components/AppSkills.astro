@@ -1,0 +1,29 @@
+---
+import { t } from "i18next"
+
+interface Skill {
+  name: string
+  level: number
+}
+
+const skills: Skill[] = t('skills', { returnObjects: true })
+---
+<section class="mt-14">
+  <h2 class="text-4xl mb-4 mt-14 uppercase">
+    {t('skills_title')}
+  </h2>
+
+  <ul>
+    {skills.map((skill) => (
+      <li class="flex justify-between">
+        <span>{skill.name}</span>
+
+        <span class="blue darken-2 bars">
+          {Array(skill.level).fill(null).map(() => (
+            <i class="material-icons extra-tiny">grain</i>
+          ))}
+        </span>
+      </li>
+    ))}
+  </ul>
+</section>

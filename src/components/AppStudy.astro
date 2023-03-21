@@ -1,0 +1,33 @@
+---
+import { t } from "i18next"
+
+interface Study {
+  college: string
+  type: string
+  title: string
+  time: string
+}
+
+const academy: Study[] = t('academy', { returnObjects: true })
+---
+<section class="mt-14">
+  <h2 class="text-4xl mb-4 mt-14 uppercase">
+    {t('studies_title')}
+  </h2>
+
+  {academy.map((study) => (
+    <div class="mt-4">
+      <p class="text-xl">
+        {study.time}
+      </p>
+
+      <p>
+        <span class="font-semibold">{study.title}</span>
+      </p>
+
+      <p class="text-xl text-gray-600">
+        {study.college}
+      </p>
+    </div>
+  ))}
+</section>
