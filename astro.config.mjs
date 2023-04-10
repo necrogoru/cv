@@ -7,5 +7,7 @@ export default defineConfig({
   integrations: [
     astroI18next(),
     tailwind()
-  ]
+  ],
+  site: 'https://necrogoru.github.io',
+  base: '/cv'
 });
