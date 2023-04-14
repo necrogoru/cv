@@ -13,9 +13,9 @@
     "in": "in"
   },
   "information": [
-    { "kind": "Teléfono", "icon": "smartphone", "value": "+57 3146022349"},
-    { "kind": "Correo", "icon": "email", "value": "jhoxsan@gmail.com"},
-    { "kind": "Ciudad", "icon": "map", "value": "Medellín, Antioquia"}
+    { "kind": "Phone", "icon": "smartphone", "value": "+57 3146022349"},
+    { "kind": "Email", "icon": "email", "value": "jhoxsan@gmail.com"},
+    { "kind": "City", "icon": "map", "value": "Medellín, Antioquia"}
   ],
   "skills": [
     { "name": "Vue", "level": 5 },
