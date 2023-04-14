@@ -8,6 +8,10 @@
   "experience_title": "Experiencia laboral",
   "references_title": "Referencias",
   "interests_title": "Intereses",
+  "articles": {
+    "at": "en",
+    "in": "en"
+  },
   "information": [
     { "kind": "Teléfono", "icon": "smartphone", "value": "+57 3146022349"},
     { "kind": "Correo", "icon": "email", "value": "jhoxsan@gmail.com"},
@@ -131,5 +135,14 @@
   },
   "interests": [
     "Viajar", "Música", "Desarrollo", "Tecnología", "Motocicletas", "Fotografía"
-  ]
+  ],
+  "titles": {
+    "about_me": "sobre mi",
+    "contact": "contacto",
+    "education": "estudios",
+    "skills": "habilidades",
+    "experience": "experiencia laboral",
+    "references": "referencias",
+    "interests": "intereses"
+  }
 }

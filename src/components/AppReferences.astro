@@ -11,11 +11,11 @@ interface Reference {
 const references: Reference[] = t('references.personal', { returnObjects: true })
 ---
 <section class="mt-14">
-  <h2 class="text-3xl font-semibold flex items-center gap-4 ">
+  <h2 class="text-3xl font-semibold flex items-center gap-4 capitalize">
     <span class="bg-yellow-500 flex items-center justify-center p-2">
       <i class="material-icons left">group</i>
     </span>
-    {t('references_title')}
+    {t('titles.references')}
   </h2>
 
   {references.map((reference) => (
@@ -25,7 +25,7 @@ const references: Reference[] = t('references.personal', { returnObjects: true }
       </p>
 
       <p class="text-xl">
-        {reference.job} en {reference.company}
+        {reference.job} {t('articles.at')} {reference.company}
       </p>
 
       <p class="flex items-center gap-2">

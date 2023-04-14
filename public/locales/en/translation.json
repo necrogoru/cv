@@ -1,29 +1,45 @@
 {
+  "name": "Jhon F. Berrio",
+  "current_role": "Senior Frontend Developer",
+  "about_me_title": "Sobre mi",
+  "contact_title": "Contacto",
+  "studies_title": "Estudios",
+  "skills_title": "Habilidades",
+  "experience_title": "Experiencia laboral",
+  "references_title": "Referencias",
+  "interests_title": "Intereses",
+  "articles": {
+    "at": "at",
+    "in": "in"
+  },
   "information": [
     { "kind": "Teléfono", "icon": "smartphone", "value": "+57 3146022349"},
     { "kind": "Correo", "icon": "email", "value": "jhoxsan@gmail.com"},
     { "kind": "Ciudad", "icon": "map", "value": "Medellín, Antioquia"}
   ],
   "skills": [
-    {"name": "Vue", "level": 5},
-    {"name": "Nuxt", "level": 5},
-    {"name": "JavaScript", "level": 4},
-    {"name": "Typescript", "level": 4},
-    {"name": "Rails", "level": 4},
-    {"name": "Ingles", "level": 3}
+    { "name": "Vue", "level": 5 },
+    { "name": "Nuxt", "level": 5 },
+    { "name": "JavaScript", "level": 5 },
+    { "name": "Tailwindcss", "level": 5 },
+    { "name": "Jest", "level": 4 },
+    { "name": "Rails", "level": 4 },
+    { "name": "Typescript", "level": 3 },
+    { "name": "Astro", "level": 2 },
+    { "name": "React", "level": 2 }
   ],
-  "profile": "Comprometido con mi trabajo, me gusta ser autodidacta y proactivo; tengo facilidad para relacionarme con las personas, me apasiona innovar y brindar nuevas o mejores soluciones, tengo gran facilidad para manipular tecnología, me agradan los retos que se presentan y mi misión en todo lugar al que llego es cumplir con los objetivos y contribuir a la evolución y el desarrollo.",
+  "profile": "Senior Frontend Developer, passionate about development to achieve the best user experience, self-taught and proactive; I seek to measure the impact of my contributions. Curious and innovative, I am motivated by challenges and continuous learning. Expert in Web applications mainly using VueJS and NuxtJS.",
   "academy": [
     {
-      "college": "Instituto Tecnológico Metropolitano",
-      "type": "Universitarios",
-      "title": "Ingeniero en Telecomunicaciones",
+      "college": "ITM",
+      "type": "University",
+      "title": "Telecommunications Engineer",
       "time": "09-2018"
     },{
-      "college": "Instituto Tecnológico Metropolitano",
-      "type": "Universitarios",
-      "title": "Tecnólogo en Telecomunicaciones",
-      "time": "2010 hasta 2013"
+      "college": "ITM",
+      "type": "Technologist",
+      "title": "Telecommunications Technologist",
+      "time": "2010 to 2013"
     }
   ],
   "languages": [
@@ -33,71 +49,71 @@
   ],
   "courses": [
     {
-      "type": "Curso", "name": "Mercadeo y ventas en Confama, Medellín 2006"
+      "type": "Course", "name": "Mercadeo y ventas en Confama, Medellín 2006"
     },{
-      "type": "Curso", "name": "Ingles básico en Escolme, Medellín 2008"
+      "type": "Course", "name": "Ingles básico en Escolme, Medellín 2008"
     },{
-      "type": "Curso", "name": "Joomla en Emtelco, Medellín 2013"
+      "type": "Course", "name": "Joomla en Emtelco, Medellín 2013"
     }
   ],
   "experience": [
     {
       "company": "La Haus",
       "appointment": "Senior Frontend Developer",
-      "functions": "Desarrollar FrontEnd de la plataforma con el framework NuxtJs, VueJS y el BackEnd en Ruby on Rails.",
-      "time": "Abril 2022 - Actualidad"
+      "functions": "Develop public views using Vanilla JavaScript and Ruby on Rails, taking care of performance, SEO, accessibility, and traceability. Design, develop, and deploy web apps using NuxtJS and VueJS. Update JavaScript dependencies. Make bundle adjustments (Webpack or Vite) to improve site performance. Design and create the technical basis of the design system implementing Vue, Storybook, Linters (both for JavaScript and CSS), SemanticRelease for automatic versioning, Github workflows to automate testing, version generation, and publishing on NPM. Integrate monitoring and observability tools for both Front and Back. Integrate traceability tools such as Google Analytics, Segment, Heap, and Hotjar.",
+      "time": "April 2022 - Current"
     }, {
       "company": "La Haus",
-      "appointment": "FullStack Developer Mid",
-      "functions": "Desarrollar FrontEnd de la plataforma con el framework VueJS y el BackEnd en Ruby on Rails.",
-      "time": "Mayo 2019 - Abril 2022"
+      "appointment": "FullStack Mid Developer",
+      "functions": "Develop a search engine and recommendation system for the platform using Vue, Algolia, including its InstantSearch libraries, and Ruby on Rails. Migrate views from Ruby on Rails to NuxtJS. Develop and implement frontend SSR with NuxtJS, including style and JavaScript Linters, testing, repository configuration, Heroku configuration (Buildpacks, environment variables, plugins, and review app, staging, and production environments), Rollbar and Datadog observability services configuration, and traceability services.",
+      "time": "Mayo 2019 - April 2022"
     }, {
       "company": "La Haus",
       "appointment": "FullStack Developer Junior",
-      "functions": "Desarrollar FrontEnd de la plataforma con e; framework VueJS y el BackEnd en Ruby on Rails.",
-      "time": "Noviembre 2018 - Mayo 2019"
+      "functions": "Desarrollar vistas administrativas de la plataforma usando el framework VueJS y el BackEnd en Ruby on Rails.",
+      "time": "November 2018 - May 2019"
     }, {
       "company": "TIGOUNE",
-      "appointment": "Soporte Operación",
-      "functions": "Diseñar, desarrollar e implementar la plataforma del área backoffice pymes y sus bases de datos bajo Ruby on Rails, Javascript, HTML, SCSS, Materialize, Vue JS, PostgreSQL. Administrar plataforma. Crear consumos de Web Services, bajo SOAP, de mensajería certificada para envíos masivos. Desarrollar real time y non-real time Dashboards para visualizar estados de la operación e indicadores.",
-      "time": "Septiembre 2017 - Octubre 2018"
+      "appointment": "Operation Support",
+      "functions": "Design, develop, and implement the back-office platform for small and medium-sized enterprises (SMEs) and its databases using Ruby on Rails, JavaScript, HTML, SCSS, Materialize, Vue JS, and PostgreSQL. Manage the platform. Create Web Services consumption, using SOAP, for certified messaging for mass shipments. Develop real-time and non-real-time dashboards to visualize operation statuses and indicators.",
+      "time": "September 2017 - October 2018"
     }, {
       "company": "EMTELCO",
-      "appointment": "Analista de Programación y Control de Apoyo a Gerencia BPO Presencial",
-      "functions": "Analista de Indicadores, nómina y factura. Controlador de cupos, administrador de bases de datos y desarrollador de plataformas de la gerencia en Ruby on Rails, PHP, Vue JS, MySQL, HTML5, CSS3, JQuery, Bootstrap, Material Design. Manejo de Excel Avanzado.",
-      "time": "Marzo 2015 – Septiembre 2017"
+      "appointment": "Analyst of Programming and Control of Management Support BPO Presential",
+      "functions": "Indicators, payroll and invoice analyst. Quota controller, database administrator and developer of management platforms in Ruby on Rails, PHP, Vue JS, MySQL, HTML5, CSS3, JQuery, Bootstrap, Material Design. Advanced Excel skills.",
+      "time": "March 2015 – September 2017"
     }, {
       "company": "EMTELCO",
-      "appointment": "Analista de Programación y Control",
-      "functions": "Analista de reportes, nómina y factura. Manejo de Excel avanzado.",
-      "time": "Enero 2015 –  Marzo 2015"
+      "appointment": "Programming and Control Analyst",
+      "functions": "Reporting, payroll and invoice analyst. Advanced Excel skills.",
+      "time": "January 2015 –  March 2015"
     }, {
       "company": "EMTELCO",
-      "appointment": "Gestor de contenidos virtuales",
-      "functions": "Virtualizar procesos y contenidos de información.",
-      "time": "Marzo 2014 – Enero 2015"
+      "appointment": "Virtual content manager",
+      "functions": "Virtualize processes and information content.",
+      "time": "March 2014 – January 2015"
     }, {
       "company": "EMTELCO",
       "appointment": "Asesor",
-      "functions": "Realizar soporte a los técnicos de UNE.",
-      "time": "Noviembre 2013 –  Marzo  2014"
+      "functions": "Provide support to UNE technicians.",
+      "time": "November 2013 –  March  2014"
     }, {
       "company": "EMTELCO",
-      "appointment": "Aprendiz",
-      "functions": "Auxiliar Formación.",
-      "time": "Abril – Octubre, 2013"
+      "appointment": "Apprentice",
+      "functions": "Training Assistant.",
+      "time": "April – October, 2013"
     }
   ],
   "references": {
     "family": [
       {
         "name": "Gloria Delly Marin Marin",
-        "job": "Operaria",
+        "job": "Operator",
         "company": "Vestimundo S.A",
         "phone": "3117811382"
       }, {
         "name": "Edier Leon Marín",
-        "job": "Administrador",
+        "job": "Administrator",
         "company": "Ingeniería y Servicios Ltda.",
         "phone": "3007730299"
       }
@@ -105,19 +121,28 @@
     "personal": [
       {
         "name": "Jose Roberto Franco Lopez",
-        "job": "Analista Líder de nomina",
+        "job": "Lead Payroll Analyst",
         "company": "Emtelco",
         "phone": "3004838918"
       },
       {
         "name": "David Alejandro Oquendo Arango",
-        "job": "Ingeniero O&M",
+        "job": "O&M Engineer",
         "company": "Huawei",
         "phone": "3015645089"
       }
     ]
   },
   "interests": [
-    "Viajar", "Música", "Desarrollo", "Tecnología", "Motocicletas", "Fotografía"
-  ]
+    "Travel", "Music", "Development", "Technology", "Motorcycles", "Photography"
+  ],
+  "titles": {
+    "about_me": "about me",
+    "contact": "contact",
+    "education": "education",
+    "skills": "skills",
+    "experience": "experience",
+    "references": "references",
+    "interests": "interests"
+  }
 }

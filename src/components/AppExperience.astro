@@ -11,17 +11,17 @@ interface Experience {
 const experience: Experience[] = t('experience', { returnObjects: true })
 ---
 <section>
-  <h2 class="text-3xl font-semibold flex items-center gap-4 ">
+  <h2 class="text-3xl font-semibold flex items-center gap-4 capitalize">
     <span class="bg-yellow-500 flex items-center justify-center p-2">
       <i class="material-icons left">work</i>
     </span>
-    {t('experience_title')}
+    {t('titles.experience')}
   </h2>
 
   {experience.slice(0, 4).map((job) => (
     <div class="mt-8">
       <p class="without-bottom-margin without-top-margin">
-        <span class="font-semibold">{job.appointment}</span> <span class="text-2xl">en {job.company}</span>
+        <span class="font-semibold">{job.appointment}</span> <span class="text-2xl">{t('articles.at')} {job.company}</span>
       </p>
 
       <div class="">
