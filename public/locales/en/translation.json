@@ -58,10 +58,15 @@
   ],
   "experience": [
     {
+      "company": "8020REI",
+      "appointment": "Senior Frontend II",
+      "functions": "Lead the frontend team. Create and implement a new frontend in Nuxt. Structure migration process and migrate modules. Automate code quality rules, unit testing, versioning, semantic PR and deployments with Github actions. Implement observability and analytics. Migrate repository monolith and clean up its history to reduce weight.",
+      "time": "May 2024 - Current"
+    }, {
       "company": "La Haus",
       "appointment": "Senior Frontend Developer",
       "functions": "Develop public views using Vanilla JavaScript and Ruby on Rails, taking care of performance, SEO, accessibility, and traceability. Design, develop, and deploy web apps using NuxtJS and VueJS. Update JavaScript dependencies. Make bundle adjustments (Webpack or Vite) to improve site performance. Design and create the technical basis of the design system implementing Vue, Storybook, Linters (both for JavaScript and CSS), SemanticRelease for automatic versioning, Github workflows to automate testing, version generation, and publishing on NPM. Integrate monitoring and observability tools for both Front and Back. Integrate traceability tools such as Google Analytics, Segment, Heap, and Hotjar.",
-      "time": "April 2022 - Current"
+      "time": "April 2022 - April 2024"
     }, {
       "company": "La Haus",
       "appointment": "FullStack Mid Developer",
@@ -75,7 +80,7 @@
     }, {
       "company": "TIGOUNE",
       "appointment": "Operation Support",
-      "functions": "Design, develop, and implement the back-office platform for small and medium-sized enterprises (SMEs) and its databases using Ruby on Rails, JavaScript, HTML, SCSS, Materialize, Vue JS, and PostgreSQL. Manage the platform. Create Web Services consumption, using SOAP, for certified messaging for mass shipments. Develop real-time and non-real-time dashboards to visualize operation statuses and indicators.",
+      "functions": "Design, develop, and implement the back-office platform with RoR and Vue",
       "time": "September 2017 - October 2018"
     }, {
       "company": "EMTELCO",

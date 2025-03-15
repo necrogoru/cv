@@ -58,10 +58,15 @@
   ],
   "experience": [
     {
+      "company": "8020REI",
+      "appointment": "Senior Frontend II",
+      "functions": "Lead the frontend team. Create and implement a new frontend in Nuxt. Structure migration process and migrate modules. Automate code quality rules, unit testing, versioning, semantic PR and deployments with Github actions. Implement observability and analytics. Migrate repository monolith and clean up its history to reduce weight.",
+      "time": "May 2024 - Current"
+    }, {
       "company": "La Haus",
       "appointment": "Senior Frontend Developer",
       "functions": "Desarrollar vistas públicas usando JavaSript Vanilla y Ruby on Rails cuidando el performance, SEO, accesibilidad y la trazabilidad. Diseñar, desarrollar y llevar a producción webapps usando NuxtJs y VueJS. Actualizar dependencias de JavaScript. Realizar ajustes de bundles (Webpack o Vite) para mejorar el performance del sitio. Diseñar y crear base técnica del design system implementando Vue, Storybook, Linters (tanto de Javascript como CSS), SemanticRelease para el versionado automático, workflows de Github para automátizar las pruebas, la generación de versiones y las publicación en NPM. Integrar herramientas de monitoreo y observabilidad tanto para el Front como para el Back. Integrar herramientas de trazabilidad como Google Analytics, Segment, Heap y Hotjar.",
-      "time": "Abril 2022 - Actualidad"
+      "time": "Abril 2022 - April 2024"
     }, {
       "company": "La Haus",
       "appointment": "FullStack Developer Mid",
