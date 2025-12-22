@@ -6,7 +6,8 @@ interface Skill {
   level: number
 }
 
-const skills: Skill[] = t('skills', { returnObjects: true })
+const skills: Skill[] = t('skills', { returnObjects: true }) as Skill[]
+const skillsArray = Array.isArray(skills) ? skills : Object.values(skills)
 ---
 <section class="mt-14">
   <h2 class="text-4xl mb-4 mt-14 uppercase">
@@ -14,7 +15,7 @@ const skills: Skill[] = t('skills', { returnObjects: true })
   </h2>
 
   <ul>
-    {skills.map((skill) => (
+    {skillsArray.map((skill) => (
       <li class="flex justify-between">
         <span>{skill.name}</span>
 

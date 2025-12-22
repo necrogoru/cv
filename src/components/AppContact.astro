@@ -7,7 +7,8 @@ interface Info {
   value: string
 }
 
-const information: Info[] = t('information', { returnObjects: true })
+const information: Info[] = t('information', { returnObjects: true }) as Info[]
+const infoArray = Array.isArray(information) ? information : Object.values(information)
 ---
 <section>
   <h2 class="text-4xl mb-4 mt-14 uppercase">
@@ -15,7 +16,7 @@ const information: Info[] = t('information', { returnObjects: true })
   </h2>
 
   <ul class="flex flex-col gap-2">
-    {information.map((info) => (
+    {infoArray.map((info) => (
       <li class="flex items-center gap-2">
         <span class="bg-yellow-500 flex items-center justify-center p-2">
           <i class="material-icons left">{info.icon}</i>

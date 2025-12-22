@@ -8,7 +8,8 @@ interface Reference {
   phone: string
 }
 
-const references: Reference[] = t('references.personal', { returnObjects: true })
+const references: Reference[] = t('references.personal', { returnObjects: true }) as Reference[]
+const referencesArray = Array.isArray(references) ? references : Object.values(references)
 ---
 <section class="mt-14">
   <h2 class="text-3xl font-semibold flex items-center gap-4 capitalize">
@@ -18,7 +19,7 @@ const references: Reference[] = t('references.personal', { returnObjects: true }
     {t('titles.references')}
   </h2>
 
-  {references.map((reference) => (
+  {referencesArray.map((reference) => (
     <div class="mt-4">
       <p class="font-semibold">
         {reference.name}

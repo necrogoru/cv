@@ -8,7 +8,8 @@ interface Experience {
   time: string
 }
 
-const experience: Experience[] = t('experience', { returnObjects: true })
+const experience: Experience[] = t('experience', { returnObjects: true }) as Experience[]
+const experienceArray = Array.isArray(experience) ? experience : Object.values(experience)
 ---
 <section>
   <h2 class="text-3xl font-semibold flex items-center gap-4 capitalize">
@@ -18,7 +19,7 @@ const experience: Experience[] = t('experience', { returnObjects: true })
     {t('titles.experience')}
   </h2>
 
-  {experience.slice(0, 4).map((job) => (
+  {experienceArray.slice(0, 4).map((job) => (
     <div class="mt-8">
       <p class="without-bottom-margin without-top-margin">
         <span class="font-semibold">{job.appointment}</span> <span class="text-2xl">{t('articles.at')} {job.company}</span>

@@ -8,14 +8,15 @@ interface Study {
   time: string
 }
 
-const academy: Study[] = t('academy', { returnObjects: true })
+const academy: Study[] = t('academy', { returnObjects: true }) as Study[]
+const academyArray = Array.isArray(academy) ? academy : Object.values(academy)
 ---
 <section class="mt-14">
   <h2 class="text-4xl mb-4 mt-14 uppercase">
     {t('titles.education')}
   </h2>
 
-  {academy.map((study) => (
+  {academyArray.map((study) => (
     <div class="mt-4">
       <p class="text-xl">
         {study.time}

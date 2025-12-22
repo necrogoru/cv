@@ -1,7 +1,8 @@
 ---
 import { t } from "i18next"
 
-const interests: string[] = t('interests', { returnObjects: true })
+const interests: string[] = t('interests', { returnObjects: true }) as string[]
+const interestsArray = Array.isArray(interests) ? interests : Object.values(interests)
 ---
 <section class="mt-14">
   <h2 class="text-3xl font-semibold flex items-center gap-4 ">
@@ -12,7 +13,7 @@ const interests: string[] = t('interests', { returnObjects: true })
   </h2>
 
   <p>
-    {interests.map((interest, index) => (
+    {interestsArray.map((interest, index) => (
       <span>
         {(index != 0)? ' - ':''}{interest}
       </span>
