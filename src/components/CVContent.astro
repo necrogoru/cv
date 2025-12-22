@@ -17,11 +17,11 @@ const data = translations[lang];
 ---
 <Base>
   <span slot="title">{data.name} CV</span>
-  
+
   <div
     id="app"
     class="w-full max-w-screen-lg mx-auto border px-8">
-    
+
     <div class="flex justify-end pt-4">
       <LanguagePicker />
     </div>
@@ -114,6 +114,8 @@ const data = translations[lang];
 </script>
 
 <style>
+  @reference "tailwindcss";
+
   .portrait {
     &__overlay {
       @apply shadow-lg;
