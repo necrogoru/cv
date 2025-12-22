@@ -1,8 +1,11 @@
 ---
-import { t } from "i18next"
+import { getLangFromUrl, useTranslations } from '@/i18n/utils';
+import { translations } from '@/i18n/translations';
 
-const interests: string[] = t('interests', { returnObjects: true }) as string[]
-const interestsArray = Array.isArray(interests) ? interests : Object.values(interests)
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const data = translations[lang];
+const interestsArray = data.interests;
 ---
 <section class="mt-14">
   <h2 class="text-3xl font-semibold flex items-center gap-4 ">

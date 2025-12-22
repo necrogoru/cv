@@ -1,0 +1,150 @@
+---
+import { getLangFromUrl, useTranslations } from '@/i18n/utils';
+import { translations } from '@/i18n/translations';
+
+import AppExperience from '@/components/AppExperience.astro';
+import AppReferences from '@/components/AppReferences.astro';
+import AppInterests from '@/components/AppInterests.astro';
+import AppSkills from '@/components/AppSkills.astro';
+import AppStudy from '@/components/AppStudy.astro';
+import AppContact from '@/components/AppContact.astro';
+import LanguagePicker from '@/components/LanguagePicker.astro';
+import Base from '@/layouts/Base.astro';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const data = translations[lang];
+---
+<Base>
+  <span slot="title">{data.name} CV</span>
+  
+  <div
+    id="app"
+    class="w-full max-w-screen-lg mx-auto border px-8">
+    
+    <div class="flex justify-end pt-4">
+      <LanguagePicker />
+    </div>
+
+    <header class="relative md:pr-10 py-10 grid md:grid-cols-6 gap-10">
+      <div class="flex items-center md:col-span-2 justify-center">
+        <figure class="portrait w-72 h-72 flex-none rounded-full p-6 border relative">
+          <span class="portrait__overlay absolute left-0 top-0 w-full h-full block bg-yellow-500 border-gray-800" />
+          <img
+            src={import.meta.env.BASE_URL + "profile.jpg"}
+            width="172"
+            alt="Foto de Jhon"
+            class="portrait__img rounded-full w-full h-full object-cover relative">
+        </figure>
+      </div>
+
+      <div class="md:col-span-4">
+        <h1
+          class="text-8xl font-semibold text-center mb-4 relative"
+          style="font-family: 'Lobster Two', cursive;">
+          <span class="border-b-2 border-gray-800 pb-8 inline-block relative">
+            {data.name}
+          </span>
+        </h1>
+
+        <p class="text-center uppercase">
+          {data.current_role}
+        </p>
+
+        <div class="flex mt-4 gap-36">
+          <div>
+            <h2 class="text-4xl mb-4 mt-14 uppercase">
+              {t('titles.about_me')}
+            </h2>
+
+            <p class="">
+              {data.profile}
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="grid md:grid-cols-6 md:pr-10 gap-10">
+      <aside class="md:col-span-2 px-10 md:border-r-2 border-gray-400 bg-gray-200">
+        <AppContact />
+
+        <AppStudy />
+
+        <AppSkills />
+      </aside>
+
+      <div class="md:col-span-4 py-12">
+        <AppExperience />
+
+        <AppReferences />
+
+        <AppInterests />
+      </div>
+    </main>
+  </div>
+</Base>
+
+<script>
+  const constrain = 100
+  const figure = document.querySelector('.portrait')
+
+  function transforms(x, y, el) {
+    let box = el.getBoundingClientRect()
+    let calcX = -(y - box.y - (box.height / 2)) / constrain
+    let calcY = (x - box.x - (box.width / 2)) / constrain
+
+    return "perspective(100px) "
+      + "   rotateX("+ calcX +"deg) "
+      + "   rotateY("+ calcY +"deg) "
+  }
+
+  function transformElement(el, xyEl) {
+    el.style.transform  = transforms.apply(null, xyEl)
+  }
+
+  document.addEventListener('mousemove', function(e) {
+    const xy = [e.clientX, e.clientY];
+    const position = xy.concat([figure])
+
+    window.requestAnimationFrame(function(){
+      transformElement(figure, position)
+    })
+  })
+</script>
+
+<style>
+  .portrait {
+    &__overlay {
+      @apply shadow-lg;
+
+      animation-name: border-radius-overlay;
+      /* animation-name: path-overlay; */
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+  }
+
+  @keyframes border-radius-overlay {
+    0% {
+      border-radius: 88% 12% 79% 21% / 14% 80% 20% 86%;
+    }
+
+    25% {
+      border-radius: 17% 83% 9% 91% / 87% 13% 87% 13%;
+    }
+
+    50% {
+      border-radius: 31% 69% 19% 81% / 76% 25% 75% 24%;
+    }
+
+    75% {
+      border-radius: 46% 54% 32% 68% / 56% 45% 55% 44%;
+    }
+
+    100% {
+      border-radius: 73% 27% 61% 39% / 31% 72% 28% 69%;
+    }
+  }
+</style>

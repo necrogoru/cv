@@ -1,0 +1,22 @@
+---
+import { languages } from '@/i18n/ui';
+import { getLangFromUrl, useTranslatedPath } from '@/i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const translatePath = useTranslatedPath(lang);
+---
+<ul class="flex gap-4 items-center">
+  {Object.entries(languages).map(([langCode, label]) => (
+    <li>
+      <a 
+        href={translatePath('/', langCode)}
+        class:list={[
+          "px-3 py-1 rounded",
+          langCode === lang ? "bg-yellow-500 font-semibold" : "hover:bg-gray-200"
+        ]}
+      >
+        {label}
+      </a>
+    </li>
+  ))}
+</ul>

@@ -1,5 +1,6 @@
 ---
-import { t } from "i18next"
+import { getLangFromUrl, useTranslations } from '@/i18n/utils';
+import { translations } from '@/i18n/translations';
 
 interface Info {
   kind: string
@@ -7,8 +8,10 @@ interface Info {
   value: string
 }
 
-const information: Info[] = t('information', { returnObjects: true }) as Info[]
-const infoArray = Array.isArray(information) ? information : Object.values(information)
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const data = translations[lang];
+const infoArray = data.information;
 ---
 <section>
   <h2 class="text-4xl mb-4 mt-14 uppercase">

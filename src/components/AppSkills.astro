@@ -1,13 +1,16 @@
 ---
-import { t } from "i18next"
+import { getLangFromUrl, useTranslations } from '@/i18n/utils';
+import { translations } from '@/i18n/translations';
 
 interface Skill {
   name: string
   level: number
 }
 
-const skills: Skill[] = t('skills', { returnObjects: true }) as Skill[]
-const skillsArray = Array.isArray(skills) ? skills : Object.values(skills)
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const data = translations[lang];
+const skillsArray = data.skills;
 ---
 <section class="mt-14">
   <h2 class="text-4xl mb-4 mt-14 uppercase">

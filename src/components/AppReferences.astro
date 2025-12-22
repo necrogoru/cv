@@ -1,5 +1,6 @@
 ---
-import { t } from "i18next"
+import { getLangFromUrl, useTranslations } from '@/i18n/utils';
+import { translations } from '@/i18n/translations';
 
 interface Reference {
   name: string
@@ -8,8 +9,10 @@ interface Reference {
   phone: string
 }
 
-const references: Reference[] = t('references.personal', { returnObjects: true }) as Reference[]
-const referencesArray = Array.isArray(references) ? references : Object.values(references)
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const data = translations[lang];
+const referencesArray = data.references.personal;
 ---
 <section class="mt-14">
   <h2 class="text-3xl font-semibold flex items-center gap-4 capitalize">
@@ -26,7 +29,7 @@ const referencesArray = Array.isArray(references) ? references : Object.values(r
       </p>
 
       <p class="text-xl">
-        {reference.job} {t('articles.at')} {reference.company}
+        {reference.job} {data.articles.at} {reference.company}
       </p>
 
       <p class="flex items-center gap-2">

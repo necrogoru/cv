@@ -1,5 +1,6 @@
 ---
-import { t } from "i18next"
+import { getLangFromUrl, useTranslations } from '@/i18n/utils';
+import { translations } from '@/i18n/translations';
 
 interface Experience {
   company: string
@@ -8,8 +9,10 @@ interface Experience {
   time: string
 }
 
-const experience: Experience[] = t('experience', { returnObjects: true }) as Experience[]
-const experienceArray = Array.isArray(experience) ? experience : Object.values(experience)
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const data = translations[lang];
+const experienceArray = data.experience;
 ---
 <section>
   <h2 class="text-3xl font-semibold flex items-center gap-4 capitalize">
@@ -22,7 +25,7 @@ const experienceArray = Array.isArray(experience) ? experience : Object.values(e
   {experienceArray.slice(0, 4).map((job) => (
     <div class="mt-8">
       <p class="without-bottom-margin without-top-margin">
-        <span class="font-semibold">{job.appointment}</span> <span class="text-2xl">{t('articles.at')} {job.company}</span>
+        <span class="font-semibold">{job.appointment}</span> <span class="text-2xl">{data.articles.at} {job.company}</span>
       </p>
 
       <div class="">
