@@ -18,10 +18,10 @@ export const translations = {
       { name: "Typescript", level: 5 },
       { name: "JavaScript", level: 5 },
       { name: "Tailwindcss", level: 5 },
-      { name: "Jest", level: 4 },
       { name: "Vitest", level: 4 },
+      { name: "Node.js", level: 3 },
       { name: "Rails", level: 3 },
-      { name: "Astro", level: 2 },
+      { name: "Astro", level: 3 },
       { name: "React", level: 2 }
     ],
     academy: [
@@ -116,10 +116,10 @@ export const translations = {
       { name: "Typescript", level: 5 },
       { name: "JavaScript", level: 5 },
       { name: "Tailwindcss", level: 5 },
-      { name: "Jest", level: 4 },
       { name: "Vitest", level: 4 },
+      { name: "Node.js", level: 3 },
       { name: "Rails", level: 3 },
-      { name: "Astro", level: 2 },
+      { name: "Astro", level: 3 },
       { name: "React", level: 2 }
     ],
     academy: [
