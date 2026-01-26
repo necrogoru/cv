@@ -15,11 +15,12 @@ export const translations = {
     skills: [
       { name: "Vue", level: 5 },
       { name: "Nuxt", level: 5 },
+      { name: "Typescript", level: 5 },
       { name: "JavaScript", level: 5 },
       { name: "Tailwindcss", level: 5 },
       { name: "Jest", level: 4 },
-      { name: "Rails", level: 4 },
-      { name: "Typescript", level: 3 },
+      { name: "Vitest", level: 4 },
+      { name: "Rails", level: 3 },
       { name: "Astro", level: 2 },
       { name: "React", level: 2 }
     ],
@@ -82,7 +83,7 @@ export const translations = {
     references: {
       personal: [
         {
-          name: "Juliana Castrillón Guzmán",
+          name: "",
           job: "Founder and CEO",
           company: "La Haus",
           phone: "+57 3117461913"
@@ -94,7 +95,7 @@ export const translations = {
         }
       ]
     },
-    interests: ["Music", "Web development", "Video games", "Cycling"]
+    interests: ["Coding", "Photography", "Motorcycles", "Camping", "Astronomy"]
   },
   es: {
     name: "Jhon F. Berrio",
@@ -112,11 +113,12 @@ export const translations = {
     skills: [
       { name: "Vue", level: 5 },
       { name: "Nuxt", level: 5 },
+      { name: "Typescript", level: 5 },
       { name: "JavaScript", level: 5 },
       { name: "Tailwindcss", level: 5 },
       { name: "Jest", level: 4 },
-      { name: "Rails", level: 4 },
-      { name: "Typescript", level: 3 },
+      { name: "Vitest", level: 4 },
+      { name: "Rails", level: 3 },
       { name: "Astro", level: 2 },
       { name: "React", level: 2 }
     ],
@@ -191,7 +193,7 @@ export const translations = {
         }
       ]
     },
-    interests: ["Música", "Desarrollo Web", "Videojuegos", "Ciclismo"]
+    interests: ["Coding", "Fotografía", "Motos", "Camping", "Astronomía"]
   }
 } as const;
 

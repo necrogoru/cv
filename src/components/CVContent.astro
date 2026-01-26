@@ -20,40 +20,40 @@ const data = translations[lang];
 
   <div
     id="app"
-    class="w-full max-w-screen-lg mx-auto border px-8">
+    class="w-full mx-auto px-8">
 
-    <div class="flex justify-end pt-4">
+    <div class="flex justify-end pt-4 print:hidden">
       <LanguagePicker />
     </div>
 
     <header class="relative md:pr-10 py-10 grid md:grid-cols-6 gap-10">
       <div class="flex items-center md:col-span-2 justify-center">
-        <figure class="portrait w-72 h-72 flex-none rounded-full p-6 border relative">
+        <figure class="portrait w-full flex-none rounded-full p-6 border relative">
           <span class="portrait__overlay absolute left-0 top-0 w-full h-full block bg-yellow-500 border-gray-800" />
           <img
             src={import.meta.env.BASE_URL + "profile.jpg"}
             width="172"
             alt="Foto de Jhon"
-            class="portrait__img rounded-full w-full h-full object-cover relative">
+            class="portrait__img flex-none aspect-square rounded-full w-full h-full object-cover relative">
         </figure>
       </div>
 
-      <div class="md:col-span-4">
+      <div class="md:col-span-4 flex justify-center flex-col">
         <h1
-          class="text-8xl font-semibold text-center mb-4 relative"
+          class="text-8xl font-semibold mb-4 relative"
           style="font-family: 'Lobster Two', cursive;">
           <span class="border-b-2 border-gray-800 pb-8 inline-block relative">
             {data.name}
           </span>
         </h1>
 
-        <p class="text-center uppercase">
+        <p class="uppercase">
           {data.current_role}
         </p>
 
         <div class="flex mt-4 gap-36">
           <div>
-            <h2 class="text-4xl mb-4 mt-14 uppercase">
+            <h2 class="text-4xl mb-4 mt-8 uppercase">
               {t('titles.about_me')}
             </h2>
 
@@ -74,10 +74,8 @@ const data = translations[lang];
         <AppSkills />
       </aside>
 
-      <div class="md:col-span-4 py-12">
+      <div class="md:col-span-4">
         <AppExperience />
-
-        <AppReferences />
 
         <AppInterests />
       </div>
@@ -116,16 +114,12 @@ const data = translations[lang];
 <style>
   @reference "tailwindcss";
 
-  .portrait {
-    &__overlay {
-      @apply shadow-lg;
-
-      animation-name: border-radius-overlay;
-      /* animation-name: path-overlay; */
-      animation-duration: 5s;
-      animation-iteration-count: infinite;
-      animation-direction: alternate;
-    }
+  .portrait__overlay {
+    animation-name: border-radius-overlay;
+    /* animation-name: path-overlay; */
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
   }
 
   @keyframes border-radius-overlay {
