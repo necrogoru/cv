@@ -22,9 +22,9 @@ const skillsArray = data.skills;
       <li class="flex justify-between">
         <span>{skill.name}</span>
 
-        <span class="flex items-center text-gray-700">
+        <span class="flex items-center gap-4 text-gray-700">
           {Array(skill.level).fill(null).map(() => (
-            <i class="material-symbols-outlined">eraser_size_4</i>
+            <i class="material-symbols-outlined w-5 h-5 flex-none">eraser_size_4</i>
           ))}
         </span>
       </li>
