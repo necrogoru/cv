@@ -79,7 +79,11 @@ const data = translations[lang];
     </header>
 
     <main class="grid md:grid-cols-6 md:pr-10 gap-10">
-      <aside class="md:col-span-2 px-10 md:border-r border-gray-400">
+      <aside class="md:col-span-2 relative px-10 md:border-r border-gray-500">
+        <span class="absolute block w-6 h-6 rounded-full right-0 bg-white border border-gray-600 translate-x-1/2 top-0" />
+
+        <span class="absolute block w-6 h-6 rounded-full right-0 bg-white border border-gray-600 translate-x-1/2 bottom-0" />
+
         <AppContact />
 
         <AppStudy />
