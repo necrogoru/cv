@@ -28,26 +28,39 @@ const data = translations[lang];
 
     <header class="relative md:pr-10 py-10 grid md:grid-cols-6 gap-10">
       <div class="flex items-center md:col-span-2 justify-center">
-        <figure class="portrait w-full flex-none rounded-full p-6 border relative">
-          <span class="portrait__overlay absolute left-0 top-0 w-full h-full block bg-yellow-500 border-gray-800" />
+        <figure
+          class="portrait w-full flex-none relative"
+          >
           <img
-            src={import.meta.env.BASE_URL + "/profile.jpg"}
+            src={import.meta.env.BASE_URL + "/profile.png"}
             width="172"
             alt="Foto de Jhon"
-            class="portrait__img flex-none aspect-square rounded-full w-full h-full object-cover relative">
+            class="portrait__img flex-none aspect-square rounded-2xl w-full h-full object-cover relative bg-linear-to-b from-amber-300 to-amber-500">
+
+          <span
+            class="bg-white absolute bottom-0 right-0 w-full h-full"
+            style="clip-path: polygon(100% 80%, 100% 82%, 82% 100%, 82% 100%);" />
         </figure>
       </div>
 
       <div class="md:col-span-4 flex justify-center flex-col">
         <h1
-          class="text-8xl font-semibold mb-4 relative"
-          style="font-family: 'Lobster Two', cursive;">
-          <span class="border-b-2 border-gray-800 pb-8 inline-block relative">
-            {data.name}
+          class="font-semibold mb-4 relative uppercase"
+          style="font-family: 'Fira Sans'; line-height: 0.6; letter-spacing: 0.8em;">
+          <span class="text-6xl inline-block relative">
+            {data.firstName}
+          </span>
+
+          <br>
+
+          <span class="text-8xl inline-block relative">
+            {data.lastName}
           </span>
         </h1>
 
-        <p class="uppercase">
+        <p
+          class="uppercase"
+          style="font-family: 'Fira Sans'; line-height: 0.6;">
           {data.current_role}
         </p>
 
@@ -66,7 +79,7 @@ const data = translations[lang];
     </header>
 
     <main class="grid md:grid-cols-6 md:pr-10 gap-10">
-      <aside class="md:col-span-2 px-10 md:border-r-2 border-gray-400 bg-gray-200">
+      <aside class="md:col-span-2 px-10 md:border-r border-gray-400">
         <AppContact />
 
         <AppStudy />
@@ -82,39 +95,6 @@ const data = translations[lang];
     </main>
   </div>
 </Base>
-
-<script>
-  const constrain = 100
-  const maxRotation = 2 // Maximum rotation in degrees
-  const figure = document.querySelector('.portrait')
-
-  function transforms(x, y, el) {
-    let box = el.getBoundingClientRect()
-    let calcX = -(y - box.y - (box.height / 2)) / constrain
-    let calcY = (x - box.x - (box.width / 2)) / constrain
-
-    // Clamp rotation values to max range
-    calcX = Math.max(-maxRotation, Math.min(maxRotation, calcX))
-    calcY = Math.max(-maxRotation, Math.min(maxRotation, calcY))
-
-    return "perspective(100px) "
-      + "   rotateX("+ calcX +"deg) "
-      + "   rotateY("+ calcY +"deg) "
-  }
-
-  function transformElement(el, xyEl) {
-    el.style.transform  = transforms.apply(null, xyEl)
-  }
-
-  document.addEventListener('mousemove', function(e) {
-    const xy = [e.clientX, e.clientY];
-    const position = xy.concat([figure])
-
-    window.requestAnimationFrame(function(){
-      transformElement(figure, position)
-    })
-  })
-</script>
 
 <style>
   @reference "tailwindcss";

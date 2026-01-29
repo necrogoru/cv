@@ -1,6 +1,7 @@
 export const translations = {
   en: {
-    name: "Jhon F. Berrio",
+    firstName: "Jhon F.",
+    lastName: "Berrio",
     current_role: "Senior Frontend Developer",
     profile: "Senior Frontend Developer, passionate about development to achieve the best user experience, self-taught and proactive; I seek to measure the impact of my contributions. Curious and innovative, I am motivated by challenges and continuous learning. Expert in Web applications mainly using VueJS and NuxtJS.",
     articles: {
@@ -8,9 +9,9 @@ export const translations = {
       in: "in"
     },
     information: [
-      { kind: "Phone", icon: "smartphone", value: "+57 3146022349"},
-      { kind: "Email", icon: "email", value: "jhoxsan@gmail.com"},
-      { kind: "City", icon: "map", value: "Medellín, Antioquia"}
+      { kind: "Phone", icon: "mobile_3", value: "+57 3146022349"},
+      { kind: "Email", icon: "alternate_email", value: "jhoxsan@gmail.com"},
+      { kind: "City", icon: "location_on", value: "Medellín, Antioquia"}
     ],
     skills: [
       { name: "Vue", level: 5 },
@@ -98,7 +99,8 @@ export const translations = {
     interests: ["Coding", "Photography", "Motorcycles", "Camping", "Astronomy"]
   },
   es: {
-    name: "Jhon F. Berrio",
+    firstName: "Jhon F.",
+    lastName: "Berrio",
     current_role: "Senior Frontend Developer",
     profile: "Desarrollador Frontend Senior, apasionado por el desarrollo para lograr la mejor experiencia de los usuarios, autodidacta y proactivo; busco medir el impacto de mi contribuciones. Curioso e innovador, me motivan los retos y el aprendizaje continuo. Experto en aplicaciones Web principalmente bajo el uso de VueJS y NuxtJS.",
     articles: {

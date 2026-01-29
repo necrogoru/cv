@@ -8,7 +8,7 @@ export const showDefaultLang = false;
 
 export const ui = {
   en: {
-    'titles.about_me': 'About me',
+    'titles.about_me': 'Profile',
     'titles.contact': 'Contact',
     'titles.education': 'Education',
     'titles.skills': 'Skills',
