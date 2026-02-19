@@ -42,7 +42,7 @@ export const translations = {
       {
         company: "8020REI",
         appointment: "Senior Frontend II",
-        functions: "Lead the frontend team. Create and implement a new frontend in Nuxt. Structure migration process and migrate modules. Automate code quality rules, unit testing, versioning, semantic PR and deployments with Github actions. Implement observability and analytics. Migrate repository monolith and clean up its history to reduce weight.",
+        functions: "Lead the frontend team. Create and implement a new frontend in Nuxt. Structure migration process and migrate modules. Automate code quality rules, unit testing, versioning, semantic PR and deployments with Github actions. Implement observability and analytics. Migrate repository monolith and clean up its history to reduce weight. Agent-agnostic setup for AI instructions, including skills, context, and prompts.",
         time: "May 2024 - Current"
       }, {
         company: "La Haus",
@@ -141,7 +141,7 @@ export const translations = {
       {
         company: "8020REI",
         appointment: "Senior Frontend II",
-        functions: "Lead the frontend team. Create and implement a new frontend in Nuxt. Structure migration process and migrate modules. Automate code quality rules, unit testing, versioning, semantic PR and deployments with Github actions. Implement observability and analytics. Migrate repository monolith and clean up its history to reduce weight.",
+        functions: "Lideré el equipo de frontend. Creé e implementé un nuevo frontend en Nuxt. Estructuré el proceso de migración y migré módulos. Automaticé reglas de calidad de código, pruebas unitarias, versionado, PR semánticos y despliegues con GitHub Actions. Implementé observabilidad y analítica. Migré el monolito del repositorio y depuré su historial para reducir su peso. Implemente la configuración agnóstica de agentes para instrucciones de IA, incluyendo skills, contexto y prompts",
         time: "May 2024 - Current"
       }, {
         company: "La Haus",
