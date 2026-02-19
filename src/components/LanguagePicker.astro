@@ -9,7 +9,7 @@ const translatePath = useTranslatedPath(lang);
   {Object.entries(languages).map(([langCode, label]) => (
     <li>
       <a
-        href={translatePath('/', langCode)}
+        href={translatePath(langCode, 'cv/')}
         class:list={[
           "px-3 py-1 rounded",
           langCode === lang ? "bg-yellow-500 font-semibold" : "hover:bg-gray-200"
