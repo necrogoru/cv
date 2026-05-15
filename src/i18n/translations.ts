@@ -2,7 +2,7 @@ export const translations = {
   en: {
     firstName: "Jhon F.",
     lastName: "Berrio",
-    current_role: "Senior Frontend Developer",
+    current_role: "Frontend Tech Lead",
     profile: "Senior Frontend Developer, passionate about development to achieve the best user experience, self-taught and proactive; I seek to measure the impact of my contributions. Curious and innovative, I am motivated by challenges and continuous learning. Expert in Web applications mainly using VueJS and NuxtJS.",
     articles: {
       at: "at",
@@ -41,8 +41,8 @@ export const translations = {
     experience: [
       {
         company: "8020REI",
-        appointment: "Senior Frontend II",
-        functions: "Lead the frontend team. Create and implement a new frontend in Nuxt. Structure migration process and migrate modules. Automate code quality rules, unit testing, versioning, semantic PR and deployments with Github actions. Implement observability and analytics. Migrate repository monolith and clean up its history to reduce weight. Agent-agnostic setup for AI instructions, including skills, context, and prompts.",
+        appointment: "Frontend Tech Lead",
+        functions: "Lead the frontend team. Created and implemented a new frontend in Nuxt, structured the migration process, and migrated modules. Make architecture and infrastructure decisions for frontend and backend systems. Use AI coding to accelerate the creation of new backends and strengthen frontend development through skills, agent structures, context, and prompts. Support the product team in defining solutions and technical criteria. Automated code quality rules, unit testing, versioning, semantic PRs, and deployments with GitHub Actions. Implemented observability, analytics, and an agent-agnostic setup for AI instructions.",
         time: "May 2024 - Current"
       }, {
         company: "La Haus",
@@ -101,7 +101,7 @@ export const translations = {
   es: {
     firstName: "Jhon F.",
     lastName: "Berrio",
-    current_role: "Senior Frontend Developer",
+    current_role: "Frontend Tech Lead",
     profile: "Desarrollador Frontend Senior, apasionado por el desarrollo para lograr la mejor experiencia de los usuarios, autodidacta y proactivo; busco medir el impacto de mi contribuciones. Curioso e innovador, me motivan los retos y el aprendizaje continuo. Experto en aplicaciones Web principalmente bajo el uso de VueJS y NuxtJS.",
     articles: {
       at: "en",
@@ -140,8 +140,8 @@ export const translations = {
     experience: [
       {
         company: "8020REI",
-        appointment: "Senior Frontend II",
-        functions: "Lideré el equipo de frontend. Creé e implementé un nuevo frontend en Nuxt. Estructuré el proceso de migración y migré módulos. Automaticé reglas de calidad de código, pruebas unitarias, versionado, PR semánticos y despliegues con GitHub Actions. Implementé observabilidad y analítica. Migré el monolito del repositorio y depuré su historial para reducir su peso. Implemente la configuración agnóstica de agentes para instrucciones de IA, incluyendo skills, contexto y prompts",
+        appointment: "Frontend Tech Lead",
+        functions: "Lidero el equipo de frontend. Creé e implementé un nuevo frontend en Nuxt, estructuré el proceso de migración y migré módulos. Tomo decisiones de arquitectura e infraestructura para frontend y backend. Uso AI coding para acelerar la creación de nuevos backends y para fortalecer el desarrollo frontend mediante skills, estructuras de agentes, contexto y prompts. Acompaño al equipo de producto en la definición de soluciones y criterios técnicos. Automaticé reglas de calidad de código, pruebas unitarias, versionado, PR semánticos y despliegues con GitHub Actions. Implementé observabilidad, analítica y una configuración agnóstica de agentes para instrucciones de IA.",
         time: "May 2024 - Current"
       }, {
         company: "La Haus",
