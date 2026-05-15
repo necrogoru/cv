@@ -3,7 +3,7 @@ export const translations = {
     firstName: "Jhon F.",
     lastName: "Berrio",
     current_role: "Frontend Tech Lead",
-    profile: "Senior Frontend Developer, passionate about development to achieve the best user experience, self-taught and proactive; I seek to measure the impact of my contributions. Curious and innovative, I am motivated by challenges and continuous learning. Expert in Web applications mainly using VueJS and NuxtJS.",
+    profile: "Frontend Tech Lead specializing in Vue, Nuxt, frontend architecture, developer experience, and AI-assisted engineering workflows. I lead frontend teams, define technical direction, improve delivery systems, and partner with product teams to turn ambiguous needs into scalable software solutions.",
     articles: {
       at: "at",
       in: "in"
@@ -16,9 +16,9 @@ export const translations = {
     skills: [
       { name: "Vue", level: 5 },
       { name: "Nuxt", level: 5 },
-      { name: "Typescript", level: 5 },
+      { name: "TypeScript", level: 5 },
       { name: "JavaScript", level: 5 },
-      { name: "Tailwindcss", level: 5 },
+      { name: "Tailwind CSS", level: 5 },
       { name: "Vitest", level: 4 },
       { name: "Node.js", level: 3 },
       { name: "Rails", level: 3 },
@@ -42,49 +42,49 @@ export const translations = {
       {
         company: "8020REI",
         appointment: "Frontend Tech Lead",
-        functions: "Lead the frontend team. Created and implemented a new frontend in Nuxt, structured the migration process, and migrated modules. Make architecture and infrastructure decisions for frontend and backend systems. Use AI coding to accelerate the creation of new backends and strengthen frontend development through skills, agent structures, context, and prompts. Support the product team in defining solutions and technical criteria. Automated code quality rules, unit testing, versioning, semantic PRs, and deployments with GitHub Actions. Implemented observability, analytics, and an agent-agnostic setup for AI instructions.",
-        time: "May 2024 - Current"
+        functions: "Lead the frontend team and define technical direction for frontend initiatives. Created and implemented a new Nuxt frontend, structured the migration strategy, and migrated product modules. Make architecture and infrastructure decisions for frontend and backend systems. Built AI-assisted development workflows to accelerate backend creation and strengthen frontend delivery through reusable skills, agent structures, shared context, and prompts. Partner with product teams to define solutions, technical criteria, and implementation trade-offs. Automated code quality rules, unit testing, versioning, semantic PRs, and deployments with GitHub Actions. Implemented observability, analytics, and an agent-agnostic setup for AI instructions.",
+        time: "May 2024 - Present"
       }, {
         company: "La Haus",
         appointment: "Senior Frontend Developer",
-        functions: "Develop public views using Vanilla JavaScript and Ruby on Rails, taking care of performance, SEO, accessibility, and traceability. Design, develop, and deploy web apps using NuxtJS and VueJS. Update JavaScript dependencies. Make bundle adjustments (Webpack or Vite) to improve site performance. Design and create the technical basis of the design system implementing Vue, Storybook, Linters (both for JavaScript and CSS), SemanticRelease for automatic versioning, Github workflows to automate testing, version generation, and publishing on NPM. Integrate monitoring and observability tools for both Front and Back. Integrate traceability tools such as Google Analytics, Segment, Heap, and Hotjar.",
+        functions: "Developed public views using Vanilla JavaScript and Ruby on Rails, with focus on performance, SEO, accessibility, and traceability. Designed, developed, and deployed web apps using NuxtJS and VueJS. Updated JavaScript dependencies and adjusted bundles with Webpack and Vite to improve site performance. Designed the technical foundation of the design system with Vue, Storybook, JavaScript and CSS linters, Semantic Release for automatic versioning, and GitHub workflows to automate testing, version generation, and NPM publishing. Integrated monitoring, observability, and traceability tools across frontend and backend systems, including Google Analytics, Segment, Heap, and Hotjar.",
         time: "April 2022 - April 2024"
       }, {
         company: "La Haus",
-        appointment: "FullStack Mid Developer",
-        functions: "Develop a search engine and recommendation system for the platform using Vue, Algolia, including its InstantSearch libraries, and Ruby on Rails. Migrate views from Ruby on Rails to NuxtJS. Develop and implement frontend SSR with NuxtJS, including style and JavaScript Linters, testing, repository configuration, Heroku configuration (Buildpacks, environment variables, plugins, and review app, staging, and production environments), Rollbar and Datadog observability services configuration, and traceability services.",
-        time: "Mayo 2019 - April 2022"
+        appointment: "Mid Full-stack Developer",
+        functions: "Developed the platform search engine and recommendation system using Vue, Algolia, InstantSearch, and Ruby on Rails. Migrated views from Ruby on Rails to NuxtJS. Developed and implemented a server-side rendered frontend with NuxtJS, including style and JavaScript linters, tests, repository configuration, Heroku setup with buildpacks, environment variables, plugins, review apps, staging and production environments, Rollbar and Datadog observability services, and traceability integrations.",
+        time: "May 2019 - April 2022"
       }, {
         company: "La Haus",
-        appointment: "FullStack Developer Junior",
-        functions: "Desarrollar vistas administrativas de la plataforma usando el framework VueJS y el BackEnd en Ruby on Rails.",
+        appointment: "Junior Full-stack Developer",
+        functions: "Developed administrative platform views using VueJS for the frontend and Ruby on Rails for the backend.",
         time: "November 2018 - May 2019"
       }, {
         company: "TIGOUNE",
-        appointment: "Operation Support",
-        functions: "Design, develop, and implement the back-office platform with RoR and Vue",
+        appointment: "Operations Support",
+        functions: "Designed, developed, and implemented the SME back-office platform and its databases using Ruby on Rails, JavaScript, HTML, SCSS, Materialize, VueJS, and PostgreSQL. Administered the platform, integrated SOAP web services for certified mass messaging, and developed real-time and non-real-time dashboards to monitor operational status and indicators.",
         time: "September 2017 - October 2018"
       }, {
         company: "EMTELCO",
-        appointment: "Analyst of Programming and Control of Management Support BPO Presential",
-        functions: "Indicators, payroll and invoice analyst. Quota controller, database administrator and developer of management platforms in Ruby on Rails, PHP, Vue JS, MySQL, HTML5, CSS3, JQuery, Bootstrap, Material Design. Advanced Excel skills.",
+        appointment: "On-site BPO Management Support Programming and Control Analyst",
+        functions: "Analyzed indicators, payroll, and invoicing. Managed quotas, administered databases, and developed management platforms using Ruby on Rails, PHP, VueJS, MySQL, HTML5, CSS3, jQuery, Bootstrap, and Material Design. Advanced Excel user.",
         time: "March 2015 – September 2017"
       }, {
         company: "EMTELCO",
         appointment: "Programming and Control Analyst",
-        functions: "Reporting, payroll and invoice analyst. Advanced Excel skills.",
+        functions: "Prepared reports and supported payroll and invoicing analysis. Advanced Excel user.",
         time: "January 2015 –  March 2015"
       }, {
         company: "EMTELCO",
-        appointment: "Virtual content manager",
-        functions: "Virtualize processes and information content.",
+        appointment: "Virtual Content Manager",
+        functions: "Virtualized operational processes and information content.",
         time: "March 2014 – January 2015"
       }
     ],
     references: {
       personal: [
         {
-          name: "",
+          name: "Juliana Castrillón Guzmán",
           job: "Founder and CEO",
           company: "La Haus",
           phone: "+57 3117461913"
@@ -102,7 +102,7 @@ export const translations = {
     firstName: "Jhon F.",
     lastName: "Berrio",
     current_role: "Frontend Tech Lead",
-    profile: "Desarrollador Frontend Senior, apasionado por el desarrollo para lograr la mejor experiencia de los usuarios, autodidacta y proactivo; busco medir el impacto de mi contribuciones. Curioso e innovador, me motivan los retos y el aprendizaje continuo. Experto en aplicaciones Web principalmente bajo el uso de VueJS y NuxtJS.",
+    profile: "Frontend Tech Lead especializado en Vue, Nuxt, arquitectura frontend, experiencia de desarrollo y flujos de ingeniería asistidos por IA. Lidero equipos frontend, defino dirección técnica, mejoro sistemas de entrega y acompaño a producto para convertir necesidades ambiguas en soluciones de software escalables.",
     articles: {
       at: "en",
       in: "en"
@@ -115,9 +115,9 @@ export const translations = {
     skills: [
       { name: "Vue", level: 5 },
       { name: "Nuxt", level: 5 },
-      { name: "Typescript", level: 5 },
+      { name: "TypeScript", level: 5 },
       { name: "JavaScript", level: 5 },
-      { name: "Tailwindcss", level: 5 },
+      { name: "Tailwind CSS", level: 5 },
       { name: "Vitest", level: 4 },
       { name: "Node.js", level: 3 },
       { name: "Rails", level: 3 },
@@ -141,22 +141,22 @@ export const translations = {
       {
         company: "8020REI",
         appointment: "Frontend Tech Lead",
-        functions: "Lidero el equipo de frontend. Creé e implementé un nuevo frontend en Nuxt, estructuré el proceso de migración y migré módulos. Tomo decisiones de arquitectura e infraestructura para frontend y backend. Uso AI coding para acelerar la creación de nuevos backends y para fortalecer el desarrollo frontend mediante skills, estructuras de agentes, contexto y prompts. Acompaño al equipo de producto en la definición de soluciones y criterios técnicos. Automaticé reglas de calidad de código, pruebas unitarias, versionado, PR semánticos y despliegues con GitHub Actions. Implementé observabilidad, analítica y una configuración agnóstica de agentes para instrucciones de IA.",
-        time: "May 2024 - Current"
+        functions: "Lidero el equipo de frontend y defino la dirección técnica de las iniciativas frontend. Creé e implementé un nuevo frontend en Nuxt, estructuré la estrategia de migración y migré módulos de producto. Tomo decisiones de arquitectura e infraestructura para sistemas frontend y backend. Construí flujos de desarrollo asistidos por IA para acelerar la creación de backends y fortalecer la entrega frontend mediante skills reutilizables, estructuras de agentes, contexto compartido y prompts. Acompaño a producto en la definición de soluciones, criterios técnicos y decisiones de implementación. Automaticé reglas de calidad de código, pruebas unitarias, versionado, PR semánticos y despliegues con GitHub Actions. Implementé observabilidad, analítica y una configuración agnóstica de agentes para instrucciones de IA.",
+        time: "Mayo 2024 - Actualidad"
       }, {
         company: "La Haus",
         appointment: "Senior Frontend Developer",
-        functions: "Desarrollar vistas públicas usando JavaSript Vanilla y Ruby on Rails cuidando el performance, SEO, accesibilidad y la trazabilidad. Diseñar, desarrollar y llevar a producción webapps usando NuxtJs y VueJS. Actualizar dependencias de JavaScript. Realizar ajustes de bundles (Webpack o Vite) para mejorar el performance del sitio. Diseñar y crear base técnica del design system implementando Vue, Storybook, Linters (tanto de Javascript como CSS), SemanticRelease para el versionado automático, workflows de Github para automátizar las pruebas, la generación de versiones y las publicación en NPM. Integrar herramientas de monitoreo y observabilidad tanto para el Front como para el Back. Integrar herramientas de trazabilidad como Google Analytics, Segment, Heap y Hotjar.",
-        time: "Abril 2022 - April 2024"
+        functions: "Desarrollé vistas públicas usando Vanilla JavaScript y Ruby on Rails, con foco en performance, SEO, accesibilidad y trazabilidad. Diseñé, desarrollé y llevé a producción web apps usando NuxtJS y VueJS. Actualicé dependencias de JavaScript y realicé ajustes de bundles con Webpack y Vite para mejorar el performance del sitio. Diseñé la base técnica del design system con Vue, Storybook, linters de JavaScript y CSS, Semantic Release para versionado automático y workflows de GitHub para automatizar pruebas, generación de versiones y publicación en NPM. Integré herramientas de monitoreo, observabilidad y trazabilidad para frontend y backend, incluyendo Google Analytics, Segment, Heap y Hotjar.",
+        time: "Abril 2022 - Abril 2024"
       }, {
         company: "La Haus",
-        appointment: "FullStack Developer Mid",
-        functions: "Desarrollar buscador sistema recomendador de la plataforma usando Vue, Algolia incluyendo sus librerías InstantSearch y Ruby on Rails. Migrar vistas desde Ruby on Rails hacía Nuxt JS. Desarrollar e implementar frontend SSR con NuxtJS incluyendo Linters de estilos y JavaScript, pruebas, configuración de repositorio, configuración de Heroku (Buildpacks, variables de ambiente, plugins y ambientes de review apps, staging y producción), configuración de servicios de observabilidad Rollbar y Datadog, y, servicios de trazabilidad.",
+        appointment: "Mid Full-stack Developer",
+        functions: "Desarrollé el buscador y el sistema recomendador de la plataforma usando Vue, Algolia, InstantSearch y Ruby on Rails. Migré vistas desde Ruby on Rails hacia NuxtJS. Desarrollé e implementé un frontend con renderizado del lado del servidor en NuxtJS, incluyendo linters de estilos y JavaScript, pruebas, configuración de repositorio, configuración de Heroku con buildpacks, variables de ambiente, plugins, review apps, ambientes de staging y producción, servicios de observabilidad con Rollbar y Datadog, y servicios de trazabilidad.",
         time: "Mayo 2019 - Abril 2022"
       }, {
         company: "La Haus",
-        appointment: "FullStack Developer Junior",
-        functions: "Desarrollar vistas administrativas de la plataforma usando el framework VueJS y el BackEnd en Ruby on Rails.",
+        appointment: "Junior Full-stack Developer",
+        functions: "Desarrollé vistas administrativas de la plataforma usando VueJS para el frontend y Ruby on Rails para el backend.",
         time: "Noviembre 2018 - Mayo 2019"
       }, {
         company: "TIGOUNE",
