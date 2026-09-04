@@ -7,7 +7,6 @@ import AppInterests from '@/components/AppInterests.astro';
 import AppStudy from '@/components/AppStudy.astro';
 import AppContact from '@/components/AppContact.astro';
 import LanguagePicker from '@/components/LanguagePicker.astro';
-import Base from '@/layouts/Base.astro';
 import type { Lang } from '@/i18n/utils';
 
 interface Props {
@@ -18,12 +17,8 @@ const { lang } = Astro.props;
 const t = useTranslations(lang);
 const data = translations[lang];
 ---
-<Base lang={lang}>
-  <span slot="title">{data.name} CV</span>
-
   <div
-    id="app"
-    class="w-full max-w-[1024px] mx-auto px-8">
+    class="cv-app w-full max-w-[1024px] mx-auto px-8">
 
     <div class="flex justify-end pt-4 print:hidden">
       <LanguagePicker lang={lang} />
@@ -99,7 +94,6 @@ const data = translations[lang];
       </div>
     </main>
   </div>
-</Base>
 
 <style>
   @reference "tailwindcss";

@@ -1,23 +1,32 @@
 ---
-import type { Lang } from '@/i18n/utils';
+import { LANG_COOKIE } from '@/i18n/utils';
 
 interface Props {
-  lang: Lang;
+  title: string;
 }
 
-const { lang } = Astro.props;
+const { title } = Astro.props;
 ---
 <!DOCTYPE html>
-<html lang={lang}>
+<html lang="en" data-lang="en">
 <head>
   <meta charset="UTF-8">
+  <script is:inline define:vars={{ cookieName: LANG_COOKIE }}>
+    (function () {
+      var match = document.cookie.match(new RegExp('(?:^|; )' + cookieName + '=([^;]*)'));
+      var lang = match ? decodeURIComponent(match[1]) : (navigator.language || '').split('-')[0].toLowerCase();
+      if (lang !== 'en' && lang !== 'es') lang = 'en';
+      document.documentElement.dataset.lang = lang;
+      document.documentElement.lang = lang;
+    })();
+  </script>
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1.0">
   <meta
     http-equiv="X-UA-Compatible"
     content="ie=edge">
-  <title><slot name="title" /></title>
+  <title>{title}</title>
 
   <!-- Compiled and minified CSS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">

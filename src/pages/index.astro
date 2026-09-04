@@ -1,7 +1,12 @@
 ---
 import CVContent from '@/components/CVContent.astro';
-import { getLang } from '@/i18n/utils';
-
-const lang = getLang(Astro.cookies, Astro.request);
+import Base from '@/layouts/Base.astro';
+import { languages } from '@/i18n/ui';
 ---
-<CVContent lang={lang} />
+<Base title="Jhon F. Berrio CV">
+  {Object.keys(languages).map((lang) => (
+    <div data-cv-lang={lang}>
+      <CVContent lang={lang as 'en' | 'es'} />
+    </div>
+  ))}
+</Base>
