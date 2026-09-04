@@ -5,7 +5,6 @@ import { translations } from '@/i18n/translations';
 import AppExperience from '@/components/AppExperience.astro';
 import AppReferences from '@/components/AppReferences.astro';
 import AppInterests from '@/components/AppInterests.astro';
-import AppSkills from '@/components/AppSkills.astro';
 import AppStudy from '@/components/AppStudy.astro';
 import AppContact from '@/components/AppContact.astro';
 import LanguagePicker from '@/components/LanguagePicker.astro';
@@ -88,13 +87,11 @@ const data = translations[lang];
 
         <AppStudy />
 
-        <AppSkills />
+        <AppInterests />
       </aside>
 
       <div class="md:col-span-4">
         <AppExperience />
-
-        <AppInterests />
       </div>
     </main>
   </div>
