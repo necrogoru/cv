@@ -5,6 +5,9 @@
   "repository": "https://necrogoru@bitbucket.org/necrogoru/cv.git",
   "author": "Jhon Berrio <jhoxsan@gmail.com>",
   "license": "MIT",
+  "engines": {
+    "node": ">=24.20.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "astro dev",
@@ -13,9 +16,12 @@
     "preview": "astro preview"
   },
   "dependencies": {
-    "@tailwindcss/postcss": "^4.1.18",
-    "@tailwindcss/vite": "^4.1.18",
-    "astro": "^5.16.6",
-    "tailwindcss": "^4.1.18"
+    "@tailwindcss/postcss": "^4.3.3",
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "^7.3.1",
+    "tailwindcss": "^4.3.3"
+  },
+  "devDependencies": {
+    "vite": "^8.2.2"
   }
 }
