@@ -1,5 +1,6 @@
 ---
-import { getLangFromUrl, useTranslations } from '@/i18n/utils';
+import { useTranslations } from '@/i18n/utils';
+import type { Lang } from '@/i18n/utils';
 import { translations } from '@/i18n/translations';
 
 interface Info {
@@ -8,7 +9,11 @@ interface Info {
   value: string
 }
 
-const lang = getLangFromUrl(Astro.url);
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
 const t = useTranslations(lang);
 const data = translations[lang];
 const infoArray = data.information;

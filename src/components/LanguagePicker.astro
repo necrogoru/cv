@@ -1,22 +1,38 @@
 ---
 import { languages } from '@/i18n/ui';
-import { getLangFromUrl, useTranslatedPath } from '@/i18n/utils';
+import { LANG_COOKIE } from '@/i18n/utils';
+import type { Lang } from '@/i18n/utils';
 
-const lang = getLangFromUrl(Astro.url);
-const translatePath = useTranslatedPath(lang);
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 <ul class="flex gap-4 items-center">
   {Object.entries(languages).map(([langCode, label]) => (
     <li>
-      <a
-        href={translatePath(langCode, 'cv/')}
+      <button
+        type="button"
+        data-lang={langCode}
         class:list={[
-          "px-3 py-1 rounded",
+          "px-3 py-1 rounded cursor-pointer",
           langCode === lang ? "bg-yellow-500 font-semibold" : "hover:bg-gray-200"
         ]}
       >
         {label}
-      </a>
+      </button>
     </li>
   ))}
 </ul>
+
+<script define:vars={{ cookieName: LANG_COOKIE, base }}>
+  document.querySelectorAll('[data-lang]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const lang = btn.getAttribute('data-lang');
+      document.cookie = `${cookieName}=${lang};path=${base || '/'};max-age=31536000;samesite=lax`;
+      window.location.reload();
+    });
+  });
+</script>

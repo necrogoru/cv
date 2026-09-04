@@ -1,20 +1,24 @@
 ---
-import { getLangFromUrl, useTranslations } from '@/i18n/utils';
+import { useTranslations } from '@/i18n/utils';
 import { translations } from '@/i18n/translations';
 
 import AppExperience from '@/components/AppExperience.astro';
-import AppReferences from '@/components/AppReferences.astro';
 import AppInterests from '@/components/AppInterests.astro';
 import AppStudy from '@/components/AppStudy.astro';
 import AppContact from '@/components/AppContact.astro';
 import LanguagePicker from '@/components/LanguagePicker.astro';
 import Base from '@/layouts/Base.astro';
+import type { Lang } from '@/i18n/utils';
 
-const lang = getLangFromUrl(Astro.url);
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
 const t = useTranslations(lang);
 const data = translations[lang];
 ---
-<Base>
+<Base lang={lang}>
   <span slot="title">{data.name} CV</span>
 
   <div
@@ -22,7 +26,7 @@ const data = translations[lang];
     class="w-full max-w-[1024px] mx-auto px-8">
 
     <div class="flex justify-end pt-4 print:hidden">
-      <LanguagePicker />
+      <LanguagePicker lang={lang} />
     </div>
 
     <header class="relative md:pr-10 py-10 grid md:grid-cols-6 gap-10">
@@ -83,15 +87,15 @@ const data = translations[lang];
 
         <span class="absolute block w-6 h-6 rounded-full right-0 bg-white border border-gray-600 translate-x-1/2 bottom-0" />
 
-        <AppContact />
+        <AppContact lang={lang} />
 
-        <AppStudy />
+        <AppStudy lang={lang} />
 
-        <AppInterests />
+        <AppInterests lang={lang} />
       </aside>
 
       <div class="md:col-span-4">
-        <AppExperience />
+        <AppExperience lang={lang} />
       </div>
     </main>
   </div>

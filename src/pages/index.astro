@@ -1,5 +1,7 @@
 ---
-const base = import.meta.env.BASE_URL.replace(/\/$/, ''); // Remove trailing slash
-const redirectUrl = `${base}/en/`;
+import CVContent from '@/components/CVContent.astro';
+import { getLang } from '@/i18n/utils';
+
+const lang = getLang(Astro.cookies, Astro.request);
 ---
-<meta http-equiv="refresh" content={`0;url=${redirectUrl}`} />
+<CVContent lang={lang} />
